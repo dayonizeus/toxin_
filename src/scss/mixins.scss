@@ -1,0 +1,21 @@
+//Шрифты
+@mixin input_label {
+	font: {
+		family: Montserrat;
+		style: normal;
+		weight: bold;
+		size: 12px;
+	}
+	line-height: 15px;
+	padding-bottom: 5px;
+	text-transform: uppercase;
+	color: $dark;
+}
+
+@mixin text_input_placeholder {
+	font: {
+		family: Montserrat;
+		style: normal;
+		weight: normal;
+	}
+}
