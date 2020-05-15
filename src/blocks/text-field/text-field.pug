@@ -1,0 +1,6 @@
+mixin text-field(label, placeholder)
+	div(class!=attributes.class)
+		.text-field__label= label
+		input.text-field__input-form(type='text', value=placeholder)
+
+//+text-field('text-field', 'Email')(class='text-field')
