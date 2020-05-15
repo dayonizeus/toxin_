@@ -1,7 +1,14 @@
-//Шрифты
+@mixin main_font {
+	font: {
+		family: $main_font;
+		style: normal;
+		weight: normal;
+	}
+}
+
 @mixin input_label {
 	font: {
-		family: Montserrat;
+		family: $main_font;
 		style: normal;
 		weight: bold;
 		size: 12px;
@@ -10,12 +17,4 @@
 	padding-bottom: 5px;
 	text-transform: uppercase;
 	color: $dark;
-}
-
-@mixin text_input_placeholder {
-	font: {
-		family: Montserrat;
-		style: normal;
-		weight: normal;
-	}
 }

@@ -9,7 +9,7 @@
 	border: 1px solid $dark25;
 	border-radius: $corner_rounding;
 	box-sizing: border-box;
-	@include text_input_placeholder;
+	@include main_font;
 	font-size: 14px;
 	line-height: 18px;
 	color: $dark25;
