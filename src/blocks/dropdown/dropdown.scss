@@ -1,0 +1,124 @@
+.dropdown_selected {
+	position: relative;
+}
+
+.dropdown {
+	.dropdown__options {
+		display: none;
+	}
+}
+
+.dropdown__label {
+	@include input_label;
+}
+
+.dropdown__input-form {
+	width: 320px;
+	height: 44px;
+	background: $background_color;
+	border: 1px solid $dark25;
+	box-sizing: border-box;
+	@include main_font;
+	font-size: 14px;
+	line-height: 18px;
+	color: $dark25;
+	padding-left: 14px;
+}
+
+.dropdown .dropdown__input-form {
+	border-radius: $corner_rounding;
+}
+
+.dropdown_selected .dropdown__input-form {
+	border-top-left-radius: $corner_rounding;
+	border-top-right-radius: $corner_rounding;
+}
+
+.dropdown__input-form-icon {
+	font-family: 'Material Icons';
+	font-size: 24px;
+	content: 'keyboard_arrow_down';
+	display: inline;
+	color: $dark50;
+	position: relative;
+	left: -38px;
+	top: 8px;
+}
+
+.dropdown__options {
+	width: 318px;
+	background: $background_color;
+	border: 1px solid $dark50;
+	border-bottom-left-radius: $corner_rounding;
+	border-bottom-right-radius: $corner_rounding;
+	margin-top: -2px;
+	position: absolute;
+}
+
+.dropdown__option {
+	display: flex;
+	justify-content: flex-end;
+	margin: {
+		left: 14px;
+		top: 12px;
+		right: 6px;
+	}
+}
+
+.dropdown__option-title {
+	@include option_title;
+	margin-right: auto;
+}
+
+.dropdown__option-decrease {
+	margin: {
+		top: -5px;
+		right: 12px;
+	} 
+}
+
+.dropdown__option-value {
+	@include option_title;
+	margin-right: 12px;
+}
+
+.dropdown__option-increase {
+	margin-top: -5px;
+}
+
+.dropdown__options-control {
+	display: flex;
+	justify-content: space-between;
+}
+
+.dropdown__options-clean, .dropdown__options-apply {
+	background: $background_color;
+	border: none;
+	padding: {
+		top: 0px;
+		right: 0px;
+		bottom: 11px;
+		left: 0px;
+	}
+	@include main_font_bold;
+	text-transform: uppercase;
+	font-size: 12px;
+	line-height: 15px;
+	margin: {
+		left: 13px;
+		top: 20px;
+		right: 6px;
+	}
+}
+
+.dropdown__options-clean {
+	color: $dark50;
+}
+
+.dropdown__options-apply {
+	color: $primary;
+}
+
+.dropdown__options-clean_off, .dropdown__options-apply_off {
+	display: none;
+}

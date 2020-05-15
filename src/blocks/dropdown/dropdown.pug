@@ -1,0 +1,16 @@
+mixin dropdown(label, value, options)
+	div(class!=attributes.class)
+		.dropdown__label= label
+		input.dropdown__input-form(type='text', value=value)
+		.dropdown__input-form-icon keyboard_arrow_down
+		.dropdown__options
+			ul.dropdown__options-list
+				each val in options
+					li.dropdown__option
+						p.dropdown__option-title= val
+						button.dropdown__option-decrease.button-switch -
+						p.dropdown__option-value 0
+						button.dropdown__option-increase.button-switch +
+			.dropdown__options-control
+				button.dropdown__options-clean очистить
+				button.dropdown__options-apply применить
