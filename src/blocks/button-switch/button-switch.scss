@@ -1,0 +1,19 @@
+.button-switch, .button-switch_off {
+	background: $background_color;
+	width: 30px;
+	height: 30px;
+	border-radius: 22px;
+	@include main_font;
+	font-size: 18px;
+	line-height: 22px;
+}
+
+.button-switch {
+	border: 1px solid $dark25;
+	color: $dark50;
+}
+
+.button-switch_off {
+	border: 1px solid $dark05;
+	color: $dark25;
+}
