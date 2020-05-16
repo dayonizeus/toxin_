@@ -30,3 +30,13 @@
 @mixin option-title {
 	@include input_label;
 }
+
+@mixin material-icon{
+	font-family: 'Material Icons';
+	font-size: 24px;
+	display: inline;
+	color: $primary;
+	position: relative;
+	left: -38px;
+	top: 7px;
+}
