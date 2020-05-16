@@ -1,0 +1,16 @@
+mixin dropdown-interior(label, value, options)
+	div(class!=attributes.class)
+		.dropdown-interior__label= label
+		input.dropdown-interior__input-form(type='text', value=value)
+		.dropdown-interior__input-form-icon keyboard_arrow_down
+		.dropdown-interior__options
+			ul.dropdown-interior__options-list
+				each val in options
+					li.dropdown-interior__option
+						p.dropdown-interior__option-title= val
+						button.dropdown-interior__option-decrease.button-switch -
+						p.dropdown-interior__option-value 0
+						button.dropdown-interior__option-increase.button-switch +
+
++dropdown-interior('dropdown', '2 спальни, 2 кровати...', ["спальни", "кровати", "ванные комнаты"])(class='dropdown-interior')
++dropdown-interior('dropdown', '2 спальни, 2 кровати...', ["спальни", "кровати", "ванные комнаты"])(class='dropdown-interior_selected')

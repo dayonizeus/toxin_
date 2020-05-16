@@ -1,0 +1,84 @@
+.dropdown-interior_selected {
+	position: relative;
+	margin-left: 10px;//удалить!
+}
+
+.dropdown-interior {
+	margin-left: 10px;//удалить!
+	.dropdown-interior__options {
+		display: none;
+	}
+}
+
+.dropdown-interior__label {
+	@include input_label;
+}
+
+.dropdown-interior__input-form {
+	width: 266px;
+	height: 44px;
+	background: $background_color;
+	border: 1px solid $dark25;
+	&:focus {
+		border: 1px solid $dark50;
+	}
+	border-top-left-radius: $corner_rounding;
+	border-top-right-radius: $corner_rounding;
+	box-sizing: border-box;
+	@include main_font;
+	font-size: 14px;
+	line-height: 18px;
+	color: $dark25;
+	padding-left: 14px;
+}
+
+.dropdown-interior__input-form-icon {
+	@include material_icon;
+}
+
+.dropdown-interior__options {
+	width: 264px;
+	background: $background_color;
+	border: 1px solid $dark50;
+	border-bottom-left-radius: $corner_rounding;
+	border-bottom-right-radius: $corner_rounding;
+	margin-top: -2px;
+	padding-bottom: 6px; 
+	position: absolute;
+}
+
+.dropdown-interior__option {
+	display: flex;
+	justify-content: flex-end;
+	margin: {
+		left: 14px;
+		top: 12px;
+		right: 6px;
+	}
+}
+
+.dropdown-interior__option-title {
+	@include option_title;
+	margin-right: auto;
+}
+
+.dropdown-interior__option-decrease {
+	margin: {
+		top: -5px;
+		right: 12px;
+	} 
+}
+
+.dropdown-interior__option-value {
+	@include option_title;
+	margin-right: 12px;
+}
+
+.dropdown-interior__option-increase {
+	margin-top: -5px;
+}
+
+.dropdown-interior__options-control {
+	display: flex;
+	justify-content: space-between;
+}
