@@ -1,0 +1,28 @@
+.date-dropdown__label {
+	@include input_label;
+}
+
+.date-dropdown__input-form {
+	width: 150px;
+	height: 44px;
+	background: $background_color;
+	border: 1px solid $dark25;
+	box-sizing: border-box;
+	@include main_font;
+	font-size: 14px;
+	line-height: 18px;
+	color: $dark75;
+	padding-left: 14px;
+	border-radius: $corner_rounding;
+}
+
+.date-dropdown__input-form-icon {
+	font-family: 'Material Icons';
+	font-size: 24px;
+	content: 'keyboard_arrow_down';
+	display: inline;
+	color: $dark50;
+	position: relative;
+	left: -38px;
+	top: 8px;
+}
