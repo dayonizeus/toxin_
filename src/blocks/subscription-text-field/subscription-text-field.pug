@@ -1,0 +1,5 @@
+mixin subscription-text-field(label, value)
+	div(class!=attributes.class)
+		.subscription-text-field__label= label
+		input.subscription-text-field__input-form(type='text', value=value)
+		.subscription-text-field__input-form-icon arrow_forward

@@ -1,0 +1,21 @@
+.subscription-text-field__label {
+	@include input_label;
+}
+
+.subscription-text-field__input-form {
+	width: 267px;
+	height: 44px;
+	background: $background_color;
+	border: 1px solid $dark25;
+	box-sizing: border-box;
+	@include main_font;
+	font-size: 14px;
+	line-height: 18px;
+	color: $dark25;
+	padding-left: 14px;
+	border-radius: $corner_rounding;
+}
+
+.subscription-text-field__input-form-icon {
+	@include material_icon;
+}
