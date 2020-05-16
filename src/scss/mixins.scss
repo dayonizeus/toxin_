@@ -27,11 +27,11 @@
 	color: $dark;
 }
 
-@mixin option-title {
+@mixin option_title {
 	@include input_label;
 }
 
-@mixin material-icon{
+@mixin material_icon{
 	font-family: 'Material Icons';
 	font-size: 24px;
 	display: inline;
