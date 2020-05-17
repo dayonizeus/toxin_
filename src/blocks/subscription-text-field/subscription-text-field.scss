@@ -18,5 +18,5 @@
 
 .subscription-text-field__input-form-icon {
 	@include material_icon;
-	color: $primary;
+	@include primary_gradient;
 }

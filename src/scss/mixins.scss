@@ -40,3 +40,10 @@
 	left: -38px;
 	top: 7px;
 }
+
+@mixin primary_gradient{
+	color: transparent;    
+	-webkit-background-clip: text;
+	background-clip: text;
+	background-image: $primary_gradient;
+}
