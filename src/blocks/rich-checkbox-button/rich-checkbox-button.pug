@@ -1,0 +1,8 @@
+mixin rich-checkbox-button(label, content)
+	div(class!=attributes.class)
+		label
+			input.rich-checkbox-button__true-checkbox(type='checkbox')
+			.rich-checkbox-button__checkmark-border
+				.rich-checkbox-button__checkmark
+			.rich-checkbox-button__label= label
+				.rich-checkbox-button__content= content
