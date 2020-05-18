@@ -1,0 +1,9 @@
+mixin dropdown-checkbox(label, options)
+	div(class!=attributes.class)
+		.dropdown-checkbox__label
+			.dropdown-checkbox__title= label
+			.dropdown-checkbox__icon-down keyboard_arrow_down
+			.dropdown-checkbox__icon-up keyboard_arrow_up
+		.dropdown-checkbox__options
+			each option in options
+				+checkbox-button(option)(class='dropdown-checkbox__option checkbox-button')

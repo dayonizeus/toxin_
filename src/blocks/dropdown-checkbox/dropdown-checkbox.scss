@@ -1,0 +1,39 @@
+.dropdown-checkbox {
+	.dropdown-checkbox__options {
+		display: none;
+	}
+	.dropdown-checkbox__icon-down {
+		@include material_icon;
+		top: -3px;
+		left: -34px;
+	}
+	.dropdown-checkbox__icon-up {
+		display: none;
+	}
+}
+
+.dropdown-checkbox_selected {
+	.dropdown-checkbox__icon-down {
+		display: none;
+	}
+
+	.dropdown-checkbox__icon-up {
+	@include material_icon;
+	top: -4px;
+	left: -34px;
+	}
+}
+
+.dropdown-checkbox__label {
+	display: flex;
+}
+
+.dropdown-checkbox__title {
+	@include input_label;
+	width: 266px;
+}
+
+.dropdown-checkbox__option {
+	padding-top: 9px;
+	padding-bottom: 1px;
+}
