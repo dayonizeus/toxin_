@@ -1,0 +1,10 @@
+mixin radio-buttons(label, name, options)
+	div(class!=attributes.class)
+		.radio-buttons__label radio buttons
+		.radio-buttons__options
+			each option in options
+				label
+					input.radio-buttons__true-button(type='radio', name=name)
+					.radio-buttons__checkmark-border
+						.radio-buttons__checkmark
+					.radio-buttons__option-content= option
