@@ -1,0 +1,43 @@
+.toggle {
+	label {
+		display: flex;
+	}
+}
+
+.toggle__true-checkbox {
+	display: none;
+}
+
+.toggle__checkmark-border {
+	width: 38px;
+	height: 18px;
+	background: $background_color;
+	border: 1px solid $dark25;
+	border-radius: 10px;
+	margin-top: 3px;
+}
+
+.toggle__checkmark {
+	width: 12px;
+	height: 12px;
+	margin-top: 3px;
+	margin-left: 3px;
+	background: $dark25;
+	border-radius: 10px;
+}
+
+.toggle__label {
+	@include main_font;
+	font-size: 14px;
+	line-height: 24px;
+	color: $dark75;
+	padding-left: 10px;
+}
+
+input:checked ~ .toggle__checkmark-border {
+	border: 1px solid $primary;
+	.toggle__checkmark {
+		background: $primary_gradient;
+		margin-left: 23px;
+	}
+}

@@ -1,0 +1,7 @@
+mixin toggle(label)
+	div(class!=attributes.class)
+		label
+			input.toggle__true-checkbox(type='checkbox')
+			.toggle__checkmark-border
+				.toggle__checkmark
+			.toggle__label= label
