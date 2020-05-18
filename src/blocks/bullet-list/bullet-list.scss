@@ -1,0 +1,27 @@
+.bullet-list__label {
+	@include input_label;
+}
+
+.bullet-list__option {
+	display: flex;
+	padding-top: 8px;
+	padding-bottom: 2px;
+}
+
+.bullet-list__marker {
+	@include material_icon;
+	top: 0;
+	left: 0;
+	color: $dark25;
+	font-size: 12px;
+	padding-top: 6px;
+}
+
+.bullet-list__content {
+	@include main_font;
+	font-size: 14px;
+	line-height: 24px;
+	color: $dark75;
+	padding-left: 10px;
+
+}
