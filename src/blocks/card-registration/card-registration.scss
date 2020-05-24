@@ -1,0 +1,59 @@
+.card-registration {
+	@include card_view;
+	width: 380px;
+	height: 646px;
+	padding-left: 28px;
+	padding-right: 29px;
+	padding-top: 38px;
+}
+
+.card-registration__title {
+	@include card_title;
+}
+
+.card-registration__name {
+	margin-top: 16px;
+}
+
+.card-registration_surname {
+	margin-top: 5px;
+}
+
+.card-registration__gender {
+	margin-top: -6px;
+}
+
+.card-registration__age {
+	margin-top: 23px;
+}
+
+.card-registration__email {
+	margin-top: 20px;
+}
+
+.card-registration__password {
+	margin-top: 5px;
+}
+
+.card-registration__apply-offer {
+	margin-top: 7px;
+	margin-left: 1px;
+}
+
+.card-registration__submit {
+	margin-top: 22px;
+}
+
+.card-registration__footer {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 30px;
+}
+
+.card-registration__footer-text {
+	@include main_font;
+	font-size: 14px;
+	line-height: 18px;
+	margin-top: 13px;
+	margin-left: 1px;
+}
