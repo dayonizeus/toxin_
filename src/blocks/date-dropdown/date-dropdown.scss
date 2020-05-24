@@ -2,6 +2,10 @@
 	@include input_label;
 }
 
+.date-dropdown__input-group {
+	display: flex;
+}
+
 .date-dropdown__input-form {
 	width: 150px;
 	height: 44px;
@@ -16,6 +20,7 @@
 	border-radius: $corner_rounding;
 }
 
-.date-dropdown__input-form-icon {
+.date-dropdown__icon {
 	@include material_icon;
 }
+

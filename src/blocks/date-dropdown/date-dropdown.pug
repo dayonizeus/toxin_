@@ -1,5 +1,6 @@
 mixin date-dropdown(label, value)
 	div(class!=attributes.class)
 		.date-dropdown__label= label
-		input.date-dropdown__input-form(type='text', value=value)
-		.date-dropdown__input-form-icon keyboard_arrow_down
+		.date-dropdown__input-group
+			input.date-dropdown__input-form(type='text', value=value)
+			.date-dropdown__icon keyboard_arrow_down
