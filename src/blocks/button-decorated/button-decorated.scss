@@ -1,0 +1,27 @@
+.button-decorated {
+	display: flex;
+}
+
+.button-decorated__button {
+	width: 320px;
+	height: 44px;
+	border-radius: $button_rounding;
+	border: 0;
+	background: $primary_gradient;
+	text-align: center;
+	color: $background_color;
+	@include main_font_bold;
+	font-size: 12px;
+	line-height: 15px;
+	text-transform: uppercase;
+	padding-left: 1px;
+	&:active {
+		opacity: 0.5;
+	}
+}
+
+.button-decorated__icon {
+	display: inline;
+	@include material_icon;
+	color: $background_color;
+}
