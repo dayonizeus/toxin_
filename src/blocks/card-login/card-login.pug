@@ -1,0 +1,9 @@
+mixin card-login()
+	div(class!=attributes.class)
+		.card-login__title Войти
+		+text-field('', 'Email')(class='card-login__email text-field')
+		+text-field('', 'Пароль')(class='card-login__password text-field')
+		+button-decorated('войти')(class='card-login__submit button-decorated')
+		.card-login__footer
+			.card-login__footer-text Нет аккаунта на Toxin?
+			+button-light('создать')(class='card-login__footer-button button-light')

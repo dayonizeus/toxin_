@@ -1,0 +1,37 @@
+.card-login {
+	@include card_view;
+	width: 380px;
+	height: 358px;
+	padding-left: 28px;
+	padding-top: 38px;
+	padding-right: 30px;
+}
+
+.card-login__title {
+	@include card_title;
+}
+
+.card-login__email {
+	margin-top: 17px;
+}
+
+.card-login__password {
+	margin-top: 5px;
+}
+
+.card-login__submit {
+	margin-top: 19px;
+}
+
+.card-login__footer {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 30px;
+}
+
+.card-login__footer-text {
+	@include main_font;
+	font-size: 14px;
+	line-height: 18px;
+	margin-top: 13px;
+}
