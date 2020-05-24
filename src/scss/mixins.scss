@@ -60,7 +60,7 @@
 }
 
 @mixin primary_gradient {
-	color: transparent;    
+	-webkit-text-fill-color: transparent;    
 	-webkit-background-clip: text;
 	background-clip: text;
 	background-image: $primary_gradient;

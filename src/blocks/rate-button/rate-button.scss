@@ -1,32 +1,25 @@
-.rate-button {
+.rate-button__stars {
 	display: flex;
-
-	label {
-	display: flex;
-	}
-
-	input {
-	display: none;
-	}
-	
-	.rate-button--on {
-	display: none;
-	}
-
-	input:checked ~ .rate-button--off {
-		display: none;
-	}
-
-	input:checked ~ .rate-button--on {
-		display: block;
-	}
 }
 
-.rate-button--on, .rate-button--off {
+.rate-button__star, .rate-button__star-border {
 	@include material_icon;
 	@include primary_gradient;
 	left: 0;
 	top: 0;
 	font-size: 24px;
 	line-height: 20px;
+	width: 24px;
+}
+
+.rate-button--four {
+	.rate-button__five {
+		display: none;
+	}
+}
+
+.rate-button--five {
+	.rate-button__four {
+		display: none;
+	}
 }
