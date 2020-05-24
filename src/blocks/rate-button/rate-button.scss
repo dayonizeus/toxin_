@@ -1,0 +1,32 @@
+.rate-button {
+	display: flex;
+
+	label {
+	display: flex;
+	}
+
+	input {
+	display: none;
+	}
+	
+	.rate-button--on {
+	display: none;
+	}
+
+	input:checked ~ .rate-button--off {
+		display: none;
+	}
+
+	input:checked ~ .rate-button--on {
+		display: block;
+	}
+}
+
+.rate-button--on, .rate-button--off {
+	@include material_icon;
+	@include primary_gradient;
+	left: 0;
+	top: 0;
+	font-size: 24px;
+	line-height: 20px;
+}
