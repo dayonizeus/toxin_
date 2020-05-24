@@ -1,0 +1,134 @@
+.card-confirmation {
+	width: 380px;
+	height: 511px;
+	@include card-view;
+	padding-top: 45px;
+	padding-left: 29px;
+	padding-right: 29px;
+
+}
+
+.card-confirmation__header {
+	display: flex;
+	justify-content: space-between;
+}
+
+.card-confirmation__room-details {
+	display: flex;
+}
+
+.card-confirmation__room-number {
+	@include secondary_font;
+	font-size: 24px;
+	line-height: 17px;
+	color: $dark;
+	&::first-letter {
+		font-size: 14px;
+	}
+}
+
+.card-confirmation__room-quality {
+	@include main_font_bold;
+	font-size: 12px;
+	line-height: 15px;
+	text-transform: uppercase;
+	color: $primary;
+	padding-top: 6px;
+	padding-left: 1px;
+}
+
+.card-confirmation__day-price {
+	display: flex;
+}
+.card-confirmation__day-price-numbers {
+	@include main_font_bold;
+	font-size: 14px;
+	line-height: 18px;
+	color: $dark50;
+	padding-top: 4px;
+	padding-right: 4px;
+}
+
+.card-confirmation__day-price-letters {
+	@include main_font;
+	font-size: 12px;
+	line-height: 18px;
+	color: $dark50;
+	padding-top: 5px;
+}
+
+.card-confirmatrion__time {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 21px;
+}
+
+.card-confirmation__guests {
+	margin-top: 20px;
+}
+
+.card-confirmation__bill-details {
+	@include main_font;
+	font-size: 14px;
+	line-height: 18px;
+	color: $dark75;
+	margin-top: 21px;
+}
+
+.card-confirmation__for-days {
+	display: flex;
+	justify-content: space-between;
+}
+
+.card-confirmation__service-charge {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 16px;
+}
+
+.card-confirmation__service-charge-title {
+	display: flex;
+}
+
+.card-confirmation__service-charge-title-info {
+	margin-left: 6px;
+	margin-top: -2px;
+}
+
+.card-confirmation__additional-services {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 16px;
+}
+
+.card-confirmation__additional-services-title {
+	display: flex;
+}
+
+.card-confirmation__additional-services-title-text {
+	width: 214px;
+}
+
+.card-confirmation__additional-services-title-info {
+	margin-left: 6px;
+}
+
+.card-confirmation__total {
+	display: flex;
+	justify-content: space-between;
+	@include secondary_font;
+	font-size: 19px;
+	line-height: 24px;
+	color: $dark;
+	margin-top: 29px;
+}
+
+.card-confirmation__total-decoration {
+	width: 182px;
+	border-bottom: 1px dashed $dark25;
+	margin-bottom: 4px;
+}
+
+.card-confirmation__submit {
+	margin-top: 20px;
+}
