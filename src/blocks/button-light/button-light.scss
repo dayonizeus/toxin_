@@ -1,0 +1,16 @@
+.button-light {
+	width: 99px;
+	height: 44px;
+	border-radius: $button_rounding;
+	border: 2px solid $primary;
+	background: $background_color;
+	text-align: center;
+	color: $primary;
+	@include main_font_bold;
+	font-size: 12px;
+	line-height: 15px;
+	text-transform: uppercase;
+	&:active {
+		opacity: 0.5;
+	}
+}
