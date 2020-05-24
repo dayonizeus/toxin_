@@ -1,0 +1,8 @@
+mixin card-search()
+	div(class!=attributes.class)
+		.card-search__title Найдём номера под ваши пожелания
+		.card-search__time
+			+date-dropdown('прибытие', 'ДД.ММ.ГГГГ')(class='card-search__arrival date-dropdown')
+			+date-dropdown('выезд', 'ДД.ММ.ГГГГ')(class='card-search__departure date-dropdown')
+		+dropdown('гости', 'Сколько гостей', ['взрослые', 'дети', 'младенцы'])(class='card-search__guests dropdown')
+		+button-decorated('подобрать номер')(class='card-search__submit button-decorated')

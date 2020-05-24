@@ -1,0 +1,28 @@
+.card-search {
+	@include card_view;
+	width: 380px;
+	height: 374px;
+	padding: {
+		left: 30px;
+		top: 40px;
+		right: 28px;
+	}
+}
+
+.card-search__title {
+	@include card_title;
+}
+
+.card-search__time {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20px;
+}
+
+.card-search__guests {
+	margin-top: 21px;
+}
+
+.card-search__submit {
+	margin-top: 30px;
+}
