@@ -1,10 +1,8 @@
-.dropdown-interior_selected {
+.dropdown-interior--selected {
 	position: relative;
-	margin-left: 10px;//удалить!
 }
 
 .dropdown-interior {
-	margin-left: 10px;//удалить!
 	.dropdown-interior__options {
 		display: none;
 	}
