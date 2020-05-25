@@ -1,0 +1,156 @@
+.card-room {
+	width: 270px;
+	height: 257.5px;
+}
+
+.card-room--888 {
+	.card-room__main {
+		background: url('../img/888bg.png');
+	}
+}
+
+.card-room--840 {
+	.card-room__main {
+		background: url('../img/840bg.png');
+	}
+}
+
+.card-room__main {
+	height: 151px;
+	background-repeat: no-repeat;
+	border-radius: $corner_rounding $corner_rounding 0 0;
+}
+
+.card-room__nav-buttons {
+	display: flex;
+	justify-content: space-between;
+}
+
+.card-room__button-prev {
+	@include material_icon;
+	width: 42px;
+	height: 151px;
+	background: transparent;
+	border: 0;
+	top: 0;
+	left: 0;
+	color: $background_color;
+}
+
+.card-room__button-next {
+	@extend .card-room__button-prev;
+}
+
+.card-room__nav-map {
+	//border: 1px solid black;	
+	display: flex;
+	position: relative;
+	bottom: 22px;
+	left: 213px;
+	width: 50px;
+}
+
+.card-room__nav-circle {
+	width: 7px;
+	height: 7px;
+	border: 1px solid $background_color;
+	box-sizing: border-box;
+	box-shadow: 0px 5px 5px rgba(31, 32, 65, 0.3);
+	border-radius: $button_rounding;
+	margin-right: 5px;
+}
+
+.card-room__nav-circle--selected {
+	@extend .card-room__nav-circle;
+	background: $background_color;
+}
+
+.card-room__footer {
+	background: $background_color;
+	border-radius: 0 0 $corner_rounding $corner_rounding;
+	padding-left: 20px;
+	padding-top: 25px;
+	padding-right: 18px;
+	padding-bottom: 21px;
+}
+
+.card-room__room-details {
+	display: flex;
+	justify-content: space-between;
+}
+
+.card-room__room-location {
+	display: flex;
+}
+
+.card-room__room-number {
+	@include secondary_font;
+	font-size: 18px;
+	line-height: 17px;
+	color: $dark;
+	&::first-letter {
+		font-size: 14px;
+	}
+}
+
+.card-room__room-quality {
+	@include main_font_bold;
+	font-size: 12px;
+	line-height: 15px;
+	text-transform: uppercase;
+	color: $primary;
+	padding-top: 2px;
+	padding-left: 4px;
+}
+
+.card-room__room-price {
+	display: flex;
+}
+
+.card-room__price-view {
+	display: flex;
+	@include main_font_bold;
+	font-size: 14px;
+	line-height: 18px;
+	color: $dark50;
+	margin-right: 4px;
+}
+
+.card-room__unit {
+	@include main_font;
+	font-size: 12px;
+	color: $dark50;
+	margin-top: 4px;
+}
+
+.card-room__delimiter {
+	border-bottom: 1px solid $dark10;
+	margin-top: 11px;
+}
+
+.card-room__review-block {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 10px;
+}
+
+.card-room__reviews {
+	display: flex;
+	margin-top: 2px;
+}
+
+.card-room_reviews-quantity {
+	@include main_font_bold;
+	font-size: 14px;
+	line-height: 18px;
+	color: $dark50;
+	margin-right: 4px;
+}
+
+.card-room_reviews-unit{
+	@include main_font;
+	font-size: 14px;
+	line-height: 18px;
+	color: $dark50;
+	margin-right: 2px;
+}
