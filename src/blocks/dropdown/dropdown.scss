@@ -1,4 +1,4 @@
-.dropdown_selected {
+.dropdown--selected {
 	position: relative;
 }
 
@@ -116,6 +116,6 @@
 	color: $primary;
 }
 
-.dropdown__options-clean_off, .dropdown__options-apply_off {
+.dropdown__options-clean--off, .dropdown__options-apply--off {
 	display: none;
 }

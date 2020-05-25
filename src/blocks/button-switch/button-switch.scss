@@ -1,4 +1,4 @@
-.button-switch, .button-switch_off {
+.button-switch, .button-switch--off {
 	background: $background_color;
 	width: 30px;
 	height: 30px;
@@ -13,7 +13,7 @@
 	color: $dark50;
 }
 
-.button-switch_off {
+.button-switch--off {
 	border: 1px solid $dark05;
 	color: $dark25;
 }
