@@ -8,7 +8,9 @@
 	border-radius: $button_rounding;
 	border: 0;
 	background: $primary_gradient;
-	text-align: center;
+	//text-align: center;
+	padding-bottom: 2px;
+	padding-right: 2px;
 	color: $background_color;
 	@include main_font_bold;
 	font-size: 12px;
@@ -21,7 +23,14 @@
 }
 
 .button-decorated__icon {
-	display: inline;
-	@include material_icon;
-	color: $background_color;
+	position: relative;
+}
+
+.button-decorated__icon::before {
+	@include input_icon;
+	content: '\e902';
+	top: 10px;
+	font-size: 24px;
+	line-height: 24px;
+	color: white;
 }

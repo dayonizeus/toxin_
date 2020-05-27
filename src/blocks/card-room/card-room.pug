@@ -2,8 +2,12 @@ mixin card-room(room_number, quality, price, stars, reviews_quantity, reviews_un
 	div(class!=attributes.class)
 		.card-room__main
 			.card-room__nav-buttons
-				button.card-room__button-prev keyboard_arrow_left
-				button.card-room__button-next keyboard_arrow_right
+				.card-room__button-prev-group
+					button.card-room__button-prev
+					.card-room__button-prev-icon
+				.card-room__button-next-group
+					button.card-room__button-next
+					.card-room__button-next-icon
 			.card-room__nav-map
 				.card-room__nav-circle--selected
 				.card-room__nav-circle
@@ -23,9 +27,9 @@ mixin card-room(room_number, quality, price, stars, reviews_quantity, reviews_un
 			.card-room__review-block
 				case stars
 					when 4
-						+rate-button(class='rate-button--four')
+						+rate-button(class='rate-button--four card-room__stars')
 					when 5
-						+rate-button(class='rate-button--five')
+						+rate-button(class='rate-button--five card-room__stars')
 				.card-room__reviews
 					.card-room_reviews-quantity= reviews_quantity
 					.card-room_reviews-unit= reviews_unit

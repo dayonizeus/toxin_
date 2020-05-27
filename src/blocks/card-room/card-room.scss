@@ -26,14 +26,31 @@
 	justify-content: space-between;
 }
 
+.card-room__button-prev-group, .card-room__button-next-group {
+	display: flex;
+}
+
 .card-room__button-prev {
-	@include material_icon;
 	width: 42px;
 	height: 151px;
 	background: transparent;
 	border: 0;
-	top: 0;
-	left: 0;
+}
+
+.card-room__button-prev-icon {
+	position: relative;
+	transform: rotate(90deg);
+	width: 0;
+}
+
+.card-room__button-prev-icon::before {
+	@include material_icon;
+	position: absolute;
+	top: 84px;
+	left: -12px;
+	content: '\e901';
+	font-size: 24px;
+	line-height: 24px;
 	color: $background_color;
 }
 
@@ -41,8 +58,17 @@
 	@extend .card-room__button-prev;
 }
 
+.card-room__button-next-icon {
+	@extend .card-room__button-prev-icon;
+	transform: rotate(-90deg);
+}
+
+.card-room__button-next-icon::before {
+	top: 41px;
+	left: -12px;
+}
+
 .card-room__nav-map {
-	//border: 1px solid black;	
 	display: flex;
 	position: relative;
 	bottom: 22px;
@@ -132,6 +158,10 @@
 	display: flex;
 	justify-content: space-between;
 	margin-top: 10px;
+}
+
+.card-room__stars {
+	margin-top: -2px;
 }
 
 .card-room__reviews {

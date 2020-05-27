@@ -50,16 +50,19 @@
 
 @mixin material_icon{
 	font-family: 'Material Icons';
-	font-size: 24px;
-	display: inline-block;
-	color: $dark50;
-	position: relative;
-	left: -34px;
-	top: 11px;
-	width: 0;
 }
 
-@mixin primary_gradient {
+@mixin input_icon {
+	@include material_icon;
+	font-size: 24px;
+	line-height: 24px;
+	position: absolute;
+	top: 9px;
+	left: -34px;
+	color: $dark50;
+}
+
+@mixin text_primary_gradient {
 	-webkit-text-fill-color: transparent;    
 	-webkit-background-clip: text;
 	background-clip: text;

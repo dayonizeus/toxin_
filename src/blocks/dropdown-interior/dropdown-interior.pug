@@ -1,8 +1,9 @@
 mixin dropdown-interior(label, value, options)
 	div(class!=attributes.class)
 		.dropdown-interior__label= label
-		input.dropdown-interior__input-form(type='text', value=value)
-		.dropdown-interior__input-form-icon keyboard_arrow_down
+		.dropdown-interior__input-group
+			input.dropdown-interior__input-form(type='text', value=value)
+			.dropdown-interior__input-form-icon
 		.dropdown-interior__options
 			ul.dropdown-interior__options-list
 				each val in options

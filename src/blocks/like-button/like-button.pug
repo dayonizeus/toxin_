@@ -1,5 +1,2 @@
-mixin like-button()
-	button(class!=attributes.class type='button')
-		.like-button__icon favorite_border
-		.like-button__icon--active favorite
-		.like-button__content 2
+mixin like-button(likes)
+	button(class!=attributes.class type='button')= likes

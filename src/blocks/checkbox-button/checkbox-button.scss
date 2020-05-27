@@ -9,16 +9,16 @@
 }
 
 .checkbox-button__checkmark-border {
-	width: 18px;
-	height: 18px;
+	width: 20px;
+	height: 20px;
 	background: $background_color;
 	border: 1px solid $dark25;
 	border-radius: $corner_rounding;
 }
 
 .checkbox-button__checkmark {
-	width: 4px;  
-	height: 6px;  
+	width: 6px;  
+	height: 8px;  
 	background: $background_color;  
 	border: 2px solid transparent;  
 	-moz-border-image: -moz-linear-gradient(top, #BC9CFF 0%, #8BA4F9 100%);  

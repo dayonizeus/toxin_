@@ -11,16 +11,22 @@
 	height: 44px;
 	background: $background_color;
 	border: 1px solid $dark25;
-	box-sizing: border-box;
 	@include main_font;
 	font-size: 14px;
 	line-height: 18px;
 	color: $dark75;
 	padding-left: 14px;
+	padding-bottom: 4px;
 	border-radius: $corner_rounding;
 }
 
 .date-dropdown__icon {
-	@include material_icon;
+	position: relative;
+}
+
+.date-dropdown__icon::before {
+	@include input_icon;
+	content: '\e901';
+	top: 11px;
 }
 

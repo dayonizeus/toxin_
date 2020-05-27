@@ -12,6 +12,10 @@
 	@include input_label;
 }
 
+.dropdown-interior__input-group {
+	display: flex;
+}
+
 .dropdown-interior__input-form {
 	width: 266px;
 	height: 44px;
@@ -31,11 +35,17 @@
 }
 
 .dropdown-interior__input-form-icon {
-	@include material_icon;
+	position: relative;
+}
+
+.dropdown-interior__input-form-icon::before {
+	@include input_icon;
+	content: '\e901';
+	top: 11px;
 }
 
 .dropdown-interior__options {
-	width: 264px;
+	width: 266px;
 	background: $background_color;
 	border: 1px solid $dark50;
 	border-bottom-left-radius: $corner_rounding;

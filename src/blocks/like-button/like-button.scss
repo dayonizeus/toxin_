@@ -4,41 +4,29 @@
 	background: $background_color;
 	border-radius: 10px;
 	border: 1px solid $dark25;
-	display: flex;
-}
-
-.like-button__icon {
-	@include material_icon;
-	left: 0;
-	top: 0;
-	font-size: 10px;
-	color: $dark25;
-	margin-top: 1px;
-	margin-left: -2px;
-}
-
-.like-button__icon--active {
-	display: none;
-}
-
-.like-button__content {
 	@include main_font;
 	font-size: 10px;
-	line-height: 12px;
+	line-height: 14px;
+	padding-left: 14px;
 	color: $dark25;
-	padding-left: 7px;
+	position: relative;
+}
+
+.like-button::before {
+	@include material_icon;
+	position: absolute;
+	top: 5px;
+	left: 4px;
+	content: '\e907';
+	font-size: 10px;
+	line-height: 9px;
 }
 
 .like-button--active {
 	@extend .like-button;
 	border: 1px solid $primary;
-	.like-button__icon {
-		display: none;
-	}
-	
-	.like-button__icon--active {
-		@extend .like-button__icon;
-		display: block;
-		color: $primary;
+	color: $primary;
+	&::before {
+		content: '\e906';
 	}
 }
