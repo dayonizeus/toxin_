@@ -1,0 +1,35 @@
+mixin header(user_name)
+	div(class!=attributes.class)
+		.header__default
+			.header__logo-wraper
+				.header__logo
+			.header__links.header__links--primary
+					.header__link 
+						a(href='#') О нас
+					.header__link 
+						a(href='#') Услуги
+					.header__link 
+						a(href='#') Вакансии
+					.header__link 
+						a(href='#') Новости
+					.header__link 
+						a(href='#') Соглашения
+			.header__user
+				case user_name
+					when 'default'
+						.header__user-buttons
+							+button-light('Войти')(class='header__button-sign-in button-light')
+							+button-dark('Зарегистрироваться')(class='header__button-register button-dark')
+					default
+						.header__user-name= user_name
+		.header__links.header__links--secondary
+			.header__link 
+				a(href='#') О нас
+			.header__link 
+				a(href='#') Услуги
+			.header__link 
+				a(href='#') Вакансии
+			.header__link 
+				a(href='#') Новости
+			.header__link 
+				a(href='#') Соглашения

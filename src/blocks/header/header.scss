@@ -1,0 +1,137 @@
+.header {
+	max-width: 100%;
+	background-color: $background_color;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	@media screen and (max-width: 1023px) {
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+}
+
+.header__default {
+	@extend .header;
+	display: flex;
+	padding: 0;
+	@media screen and (max-width: 1023px) {
+		justify-content: space-between;
+	}
+}
+
+.header__logo-wraper {
+	width: 17.08333%;
+}
+
+.header__logo {
+	width: 106px;
+	height: 40px;
+	background: url('../img/logo.svg');
+	float: right;
+	@media screen and (max-width: 1023px) {
+		float: left;
+	}
+}
+
+.header__links {
+	padding-top: 12px;
+	width: 50.563888%;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.header__links--primary {
+	@media screen and (max-width: 1023px) {
+		display: none;
+	}
+}
+
+.header__links a {
+	text-decoration: none;
+	@include main_font;
+	font-size: 14px;
+	line-height: 17px;
+	color: $dark50;
+	padding-right: 21px;
+	display: block;
+	transition: color 1s;
+	&:hover {
+		color: $dark75;
+	}
+	@media screen and (max-width: 479px) {
+		padding: 0;
+		font-size: 12px;
+	}
+}
+
+.header__link:nth-child(2) a {
+	padding-right: 44px;
+	@media screen and (max-width: 479px) {
+		padding: 0px;
+	}
+}
+
+.header__link:nth-child(5) a {
+	@media screen and (max-width: 479px) {
+		padding-right: 7px;
+	}
+}
+
+.header__link:nth-child(2) a,
+.header__link:nth-child(5) a {
+	position: relative;
+}
+
+.header__link:nth-child(2) a::after,
+.header__link:nth-child(5) a::after {
+	@include material_icon;
+	content: '\e901';
+	font-size: 24px;
+	line-height: 20px;
+	position: absolute;
+	bottom: -2px;
+	@media screen and (max-width: 479px) {
+		font-size: 12px;
+	}
+}
+
+.header__links--secondary {
+	display: none;
+	@media screen and (max-width: 1023px) {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+	}
+}
+
+.header__user-buttons {
+	padding-top: 3px;
+	margin-left: 1.52777%;
+	display: flex;
+	@media screen and (max-width: 1023px) {
+		margin: 0;
+	}
+	@media screen and (max-width: 479px) {
+		flex-wrap: wrap;
+		justify-content: flex-end;
+	}
+}
+
+.header__button-sign-in {
+	margin-right: 16px;
+	@media screen and (max-width: 479px) {
+		margin-right: 0;
+		margin-bottom: 10px;
+	}
+}
+
+.header__user-name {
+	@include main_font;
+	font-size: 14px;
+	line-height: 17px;
+	color: $dark50;
+	border-left: 1px solid $dark10;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	padding-left: 30px;
+	margin-left: 30px;
+}
