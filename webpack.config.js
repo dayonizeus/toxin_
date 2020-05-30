@@ -4,19 +4,29 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-  	entry: './src/index.js',
+  	entry: {
+      index: './src/index.js',
+      landing: './src/pages/landing.js'
+  },
   	devServer: {
+      index: 'landing.html',
+      stats: 'errors-only',
   		contentBase: './dist'
   	},
   	plugins: [
   		new CleanWebpackPlugin(),
   		new HtmlWebpackPlugin({
-  			template: './src/pug/index.pug'
+  			template: './src/pug/index.pug',
+        filename: 'index.html'
   		}),
+      new HtmlWebpackPlugin({
+        template: './src/pages/landing.pug',
+        filename: 'landing.html'
+      }),
   		new MiniCssExtractPlugin()
   	],
   	output: {
-    filename: 'main.js',
+    filename: '[name].js',
     path: path.resolve(__dirname, 'dist')
   	},
   	module: {
