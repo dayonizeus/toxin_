@@ -1,0 +1,52 @@
+@import '../scss/reset.scss';
+@import '../scss/normalize.scss';
+@import '../fonts/fonts.scss';
+@import '../scss/constants.scss';
+@import '../scss/vars.scss';
+@import '../scss/mixins.scss';
+@import '../blocks/**/*.scss';
+
+body {
+	max-width: 100%;
+}
+
+.main {
+	background: url('../img/lp_bg.png');
+	padding-top: 70px;
+	padding-left: 140px;
+	padding-right: 134px;
+	padding-bottom: 20px;
+	@media screen and (max-width: 479px) {
+		padding-right: 0;
+		padding-left: 0;
+		background: $background-color; 
+	}
+}
+
+.main__top {
+	@media screen and (max-width: 1024px) {
+		display: flex;
+		justify-content: center;
+	}
+}
+
+.main__bottom {
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 317px;
+	@media screen and (max-width: 1024px) {
+		justify-content: center;
+	}
+	@media screen and (max-width: 479px) {
+		margin-top: 30px;
+	}
+}
+
+.main__text {
+	@include main_font;
+	font-size: 14px;
+	line-height: 24px;
+	text-align: right;
+	color: $dark75;
+	width: 297px;
+}

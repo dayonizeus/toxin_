@@ -1,0 +1,14 @@
+include ../pug/mixins.pug
+<!DOCTYPE html>
+html(lang="en")
+head
+	meta(charset="UTF-8")
+	title Landing page
+body
+	+header('default')(class='header')
+	.main
+		.main__top
+			+card-search()(class='.main__card-search card-search')
+		.main__bottom
+			.main__text Лучшие номера для вашей работы, отдыха и просто вдохновения
+	+footer()(class='footer')

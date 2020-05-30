@@ -103,9 +103,10 @@
 	}
 }
 
+
 .header__user-buttons {
 	padding-top: 3px;
-	margin-left: 1.52777%;
+	margin-left: 22px;
 	display: flex;
 	@media screen and (max-width: 1023px) {
 		margin: 0;
@@ -117,7 +118,7 @@
 }
 
 .header__button-sign-in {
-	margin-right: 16px;
+	margin-right: 20px;
 	@media screen and (max-width: 479px) {
 		margin-right: 0;
 		margin-bottom: 10px;
