@@ -75,13 +75,14 @@
 .dropdown__option-decrease {
 	margin: {
 		top: -5px;
-		right: 12px;
+		// right: 12px;
 	} 
 }
 
 .dropdown__option-value {
 	@include option_title;
-	margin-right: 12px;
+	width: 32px;
+	text-align: center;
 }
 
 .dropdown__option-increase {

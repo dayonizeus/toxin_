@@ -1,5 +1,5 @@
 mixin dropdown(label, value, options)
-	div(class!=attributes.class)
+	div(class!=attributes.class name='dropdown')
 		.dropdown__label= label
 		.dropdown__input-group
 			input.dropdown__input-form(type='text', value=value)
