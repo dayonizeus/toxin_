@@ -13,5 +13,5 @@ mixin dropdown(label, value, options)
 						p.dropdown__option-value 0
 						button.dropdown__option-increase.button-switch +
 			.dropdown__options-control
-				button.dropdown__options-clean очистить
-				button.dropdown__options-apply применить
+				+button-form('очистить')(class='dropdown__options-clean button-form--clean')
+				+button-form('применить')(class='dropdown__options-apply button-form--apply')

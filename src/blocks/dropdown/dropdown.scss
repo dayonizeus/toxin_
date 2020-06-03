@@ -94,34 +94,6 @@
 	justify-content: space-between;
 }
 
-.dropdown__options-clean, .dropdown__options-apply {
-	background: $background_color;
-	border: none;
-	padding: {
-		top: 0px;
-		right: 0px;
-		bottom: 11px;
-		left: 0px;
-	}
-	@include main_font_bold;
-	text-transform: uppercase;
-	font-size: 12px;
-	line-height: 15px;
-	margin: {
-		left: 13px;
-		top: 20px;
-		right: 6px;
-	}
-}
-
-.dropdown__options-clean {
-	color: $dark50;
-}
-
-.dropdown__options-apply {
-	color: $primary;
-}
-
 .dropdown__options-clean--off, .dropdown__options-apply--off {
 	display: none;
 }
