@@ -1,8 +1,17 @@
 @font-face {
-    font-family: 'Segoe UI';
-    src: url('../fonts/SegoeUI.woff') format('woff'), 
-         url('../fonts/SegoeUI.ttf') format('truetype'), 
-         url('../fonts/SegoeUI.svg') format('svg');
+    font-family: 'Quicksand';
+    src: url('../fonts/Quicksand-Bold.woff') format('woff'), 
+         url('../fonts/Quicksand-Bold.ttf') format('truetype'), 
+         url('../fonts/Quicksand-Bold.svg') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    src: url('../fonts/OpenSans-Bold.woff') format('woff'), 
+         url('../fonts/OpenSans-Bold.ttf') format('truetype'), 
+         url('../fonts/OpenSans-Bold.svg') format('svg');
   font-weight: bold;
   font-style: normal;
 }
