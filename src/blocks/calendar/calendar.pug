@@ -1,0 +1,58 @@
+mixin calendar()
+	div(class!=attributes.class)
+		.calendar__header
+			.calendar__btn.calendar__btn-prev
+			.calendar__month Август 2019
+			.calendar__btn.calendar__btn-next
+		.calendar__main
+			.calendar__week-days
+				.calendar__ceil.calendar__week-day Пн
+				.calendar__ceil.calendar__week-day Вт
+				.calendar__ceil.calendar__week-day Ср
+				.calendar__ceil.calendar__week-day Чт
+				.calendar__ceil.calendar__week-day Пт
+				.calendar__ceil.calendar__week-day Сб
+				.calendar__ceil.calendar__week-day Вс
+			.calendar__week.calendar__first-week
+				.calendar__ceil.calendar__month-day--deactivated.calendar__1 29
+				.calendar__ceil.calendar__month-day--deactivated.calendar__2 30
+				.calendar__ceil.calendar__month-day--deactivated.calendar__3 31
+				.calendar__ceil.calendar__month-day.calendar__4 1
+				.calendar__ceil.calendar__month-day.calendar__5 2
+				.calendar__ceil.calendar__month-day.calendar__6 3
+				.calendar__ceil.calendar__month-day.calendar__7 4
+			.calendar__week.calendar__second-week
+				.calendar__ceil.calendar__month-day.calendar__8 5
+				.calendar__ceil.calendar__month-day.calendar__9 6
+				.calendar__ceil.calendar__month-day.calendar__10 7
+				.calendar__ceil.calendar__month-day--today.calendar__11 8
+				.calendar__ceil.calendar__month-day.calendar__12 9
+				.calendar__ceil.calendar__month-day.calendar__13 10
+				.calendar__ceil.calendar__month-day.calendar__14 11
+			.calendar__week.calendar__third-week
+				.calendar__ceil.calendar__month-day.calendar__15 12
+				.calendar__ceil.calendar__month-day.calendar__16 13
+				.calendar__ceil.calendar__month-day.calendar__17 14
+				.calendar__ceil.calendar__month-day.calendar__18 15
+				.calendar__ceil.calendar__month-day.calendar__19 16
+				.calendar__ceil.calendar__month-day.calendar__20 17
+				.calendar__ceil.calendar__month-day.calendar__21 18
+			.calendar__week.calendar__fourth-week
+				.calendar__ceil.calendar__month-day--selected.calendar__month-day--selected-start.calendar__22 19
+				.calendar__ceil.calendar__month-day--included.calendar__23 20
+				.calendar__ceil.calendar__month-day--included.calendar__24 21
+				.calendar__ceil.calendar__month-day--included.calendar__25 22
+				.calendar__ceil.calendar__month-day--selected.calendar__month-day--selected-end.calendar__26 23
+				.calendar__ceil.calendar__month-day.calendar__27 24
+				.calendar__ceil.calendar__month-day.calendar__28 25
+			.calendar__week.calendar__fifth-week
+				.calendar__ceil.calendar__month-day.calendar__29 26
+				.calendar__ceil.calendar__month-day.calendar__30 27
+				.calendar__ceil.calendar__month-day.calendar__31 28
+				.calendar__ceil.calendar__month-day.calendar__32 29
+				.calendar__ceil.calendar__month-day.calendar__33 30
+				.calendar__ceil.calendar__month-day.calendar__34 31
+				.calendar__ceil.calendar__month-day--deactivated.calendar__35 1
+		.calendar__footer
+			+button-form('очистить')(class='.calendar__btn-clean button-form--clean')
+			+button-form('применить')(class='.calendar__btn-apply button-form--apply')

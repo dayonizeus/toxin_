@@ -1,0 +1,130 @@
+.calendar {
+	width: 320px;
+	height: 369px;
+	padding: 20px;
+	background: $background_color;
+	border: 1px solid $dark25;
+	box-shadow: 0px 10px 20px $dark05;
+	border-radius: $corner_rounding;
+}
+
+.calendar__header {
+	display: flex;
+	justify-content: space-between;
+}
+
+.calendar__btn {
+	width: 20px;
+	height: 20px;
+	position: relative;
+	&::before {
+		@include material_icon;
+		position: absolute;
+		font-size: 24px;
+		line-height: 20px;
+		color: $primary;
+	}
+}
+
+.calendar__btn-prev::before {
+	content: '\e908';
+	left: -1px;
+	top: 1px;
+}
+
+.calendar__btn-next::before {
+	content: '\e902';
+	left: -3px;
+	top: 1px;
+}
+
+.calendar__month {
+	@include secondary_font;
+	font-size: 19px;
+	line-height: 24px;
+	margin-top: -1px;
+}
+
+.calendar__main {
+	margin-top: 29px;
+}
+
+.calendar__week-days {
+	display: flex;
+	justify-content: space-around;
+}
+
+.calendar__ceil {
+	width: 40px;
+	height: 40px;
+	font-size: 12px;
+	line-height: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.calendar__week-day {
+	@include main_font_bold;
+	color: $primary;
+}
+
+.calendar__week {
+	@extend .calendar__week-days;
+}
+
+.calendar__month-day {
+	@include main_font;
+	color: $dark50;
+}
+
+.calendar__month-day--deactivated {
+	@extend .calendar__month-day;
+	color: $dark25;
+}
+
+.calendar__month-day--today {
+	border-radius: $button_rounding;
+	background: $secondary_gradient;
+	@include main_font_bold;
+	color: $background_color;
+}
+
+.calendar__month-day--selected {
+	@extend .calendar__month-day--today;
+	background: $primary_gradient;
+	z-index: 1;
+}
+
+.calendar__month-day--selected-start {
+	@extend .calendar__month-day--selected;
+	position: relative;
+	&:after {
+		content: '';
+		position: absolute;
+		border-radius: 0;
+		width: 20px;
+		height: 40px;
+		background: $primary_gradient25;
+		left: 20px;
+		z-index: -1;
+	}
+}
+
+.calendar__month-day--selected-end {
+	@extend .calendar__month-day--selected-start;
+	&:after {
+		left: 0;
+	}
+}
+
+.calendar__month-day--included {
+	@extend .calendar__month-day;
+	background: $primary_gradient25;
+}
+
+.calendar__footer {
+	margin-top: 21px;
+	display: flex;
+	justify-content: space-between;
+}
