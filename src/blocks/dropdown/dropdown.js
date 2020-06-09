@@ -16,11 +16,11 @@ $('.dropdown__input-group').click( function() {
 
 // Сворачивание формы по клику в другом месте документа
 $(document).click( function(event) {
-	if ( $(event.target).closest('.dropdown--selected').length ) {
+	if ($(event.target).closest('.dropdown--selected').length) {
 		return;
 	}
 	$('.dropdown--selected').removeClass('dropdown--selected').addClass('dropdown');
-} )
+})
 
 // Увеличение значения опции по клику на +
 $('.dropdown__option-increase').click( function() {
