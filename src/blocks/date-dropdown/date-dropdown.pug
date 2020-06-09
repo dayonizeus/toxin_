@@ -2,5 +2,6 @@ mixin date-dropdown(label, value)
 	div(class!=attributes.class)
 		.date-dropdown__label= label
 		.date-dropdown__input-group
-			input.date-dropdown__input-form(type='text', value=value)
+			.date-dropdown__input-form= value
 			.date-dropdown__icon
+		+calendar()(class='date-dropdown__calendar--disabled calendar')

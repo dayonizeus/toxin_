@@ -1,3 +1,7 @@
+.date-dropdown {
+	position: relative;
+}
+
 .date-dropdown__label {
 	@include input_label;
 }
@@ -16,6 +20,7 @@
 	line-height: 18px;
 	color: $dark75;
 	padding-left: 14px;
+	padding-top: 11px;
 	padding-bottom: 4px;
 	border-radius: $corner_rounding;
 }
@@ -30,3 +35,17 @@
 	top: 11px;
 }
 
+.date-dropdown__calendar {
+	position: absolute;
+	top: 69px;
+}
+
+.date-dropdown--right-handle {
+	.date-dropdown__calendar {
+		left: -170px;
+	}
+}
+
+.date-dropdown__calendar--disabled {
+	display: none;
+}
