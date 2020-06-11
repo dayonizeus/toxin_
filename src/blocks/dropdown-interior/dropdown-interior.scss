@@ -73,13 +73,13 @@
 .dropdown-interior__option-decrease {
 	margin: {
 		top: -5px;
-		right: 12px;
 	} 
 }
 
 .dropdown-interior__option-value {
 	@include option_title;
-	margin-right: 12px;
+	width: 32px;
+	text-align: center;
 }
 
 .dropdown-interior__option-increase {
