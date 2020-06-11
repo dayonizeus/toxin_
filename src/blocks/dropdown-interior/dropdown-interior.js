@@ -49,32 +49,20 @@ function writeData(target) {
 		var optionCount = Number($(this)
 		.find('.dropdown-interior__option-value').text());
 		if (optionCount > 0) {
-			if (
-				$(this).find('.dropdown-interior__option-title').text() === 
-				'спальни'
-				) {
-				var optionCountLabel = caseEnding(
-				optionCount, 
-				" Спальня", " Спальни", " Спален"
-				);
+			if ($(this).find('.dropdown-interior__option-title').text() === 
+				'спальни') {
+				var optionCountLabel = caseEnding(optionCount, 
+				" Спальня", " Спальни", " Спален");
 				resultString += optionCount + optionCountLabel + ', ';
-			} else if (
-				$(this).find('.dropdown-interior__option-title').text() === 
-				'кровати'
-				) {
-				var optionCountLabel = caseEnding(
-				optionCount, 
-				" Кровать", " Кровати", " Кроватей"
-				);
+			} else if ($(this).find('.dropdown-interior__option-title').text() === 
+				'кровати') {
+				var optionCountLabel = caseEnding(optionCount, 
+				" Кровать", " Кровати", " Кроватей");
 				resultString += optionCount + optionCountLabel + ', ';
-			} else if (
-				$(this).find('.dropdown-interior__option-title').text() === 
-				'ванные комнаты'
-				) {
-				var optionCountLabel = caseEnding(
-				optionCount, 
-				" Ванная Комната", " Ванные Комнаты", " Ванных Комнат"
-				);
+			} else if ($(this).find('.dropdown-interior__option-title').text() === 
+				'ванные комнаты') {
+				var optionCountLabel = caseEnding(optionCount, 
+				" Ванная Комната", " Ванные Комнаты", " Ванных Комнат");
 				resultString += optionCount + optionCountLabel + ', ';
 			}
 		}
