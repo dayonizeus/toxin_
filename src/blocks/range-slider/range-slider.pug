@@ -1,0 +1,18 @@
+mixin range-slider(label, lower_price, top_price, footer)
+	div(class!=attributes.class)
+		.range-slider__header
+			.range-slider__label= label
+			.range-slider__screen
+				.range-slider__price-view
+					.range-slider__lower-price= lower_price
+					.range-slider__rur-symbol &#8381;
+				.range-slider__delimiter -
+				.range-slider__price-view
+					.range-slider__top-price= top_price
+					.range-slider__rur-symbol &#8381;
+		.range-slider__main
+			.range-slider__scale
+				.range-slider__left-marker.range-slider-marker
+				.range-slider__mercury
+				.range-slider__right-marker.range-slider-marker
+		.range-slider__footer= footer

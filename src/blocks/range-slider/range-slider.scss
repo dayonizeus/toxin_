@@ -1,0 +1,77 @@
+.range-slider {
+	width: 266px;
+	height: 72px;
+	background: $background_color;
+}
+
+.range-slider__header {
+	display: flex;
+	justify-content: space-between;
+}
+
+.range-slider__label {
+	@include main_font_bold;
+	font-size: 12px;
+	line-height: 15px;
+	text-transform: uppercase;
+	color: $dark;
+}
+
+.range-slider__screen{
+	display: flex;
+	@include main_font;
+	font-size: 12px;
+	line-height: 15px;
+	text-transform: uppercase;
+	color: $dark50;
+	margin-top: -1px;
+}
+
+.range-slider__price-view {
+	display: flex;
+}
+
+.range-slider__delimiter {
+	padding-right: 3px ;
+	padding-left: 3px;
+}
+
+.range-slider__main {
+	padding-top: 22px;
+	padding-bottom: 15px;
+}
+
+.range-slider__scale {
+	width: 100%;
+	height: 6px;
+	border: 1px solid $dark25;
+	border-radius: 3px;
+	position: relative;
+	display: flex;
+}
+
+.range-slider__mercury {
+	position: absolute;
+	top: -1px;
+	height: 6px;
+	background: $secondary_gradient;
+	z-index: 1;
+}
+
+.range-slider-marker {
+	width: 16px;
+	height: 16px;
+	background: $secondary_gradient;
+	border: 2px solid $background_color;
+	border-radius: 10px;
+	position: absolute;
+	top: -6px;
+	z-index: 2;
+}
+
+.range-slider__footer {
+	@include main-font;
+	font-size: 12px;
+	line-height: 14px;
+	color: $dark50;
+}
