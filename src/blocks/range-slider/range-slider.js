@@ -4,18 +4,21 @@ import $ from 'jquery';
 $(document).mousedown(function(event) {
 	// Правый бегунок
 	if ($(event.target).hasClass('range-slider__right-marker') === true) {
+		// Позиция начала шкалы
+		var scaleStart = $(event.target).parent().offset().left;
 		// Вычисление пределов движения бегунка
 		var scaleLeftSide = $(event.target).parent().offset().left;
 		var scaleWidth = Number($(event.target).parent()
 		.css('width').replace('px', ''));
-		var rightLimit = scaleLeftSide + scaleWidth - 26;
-		var leftLimit = $(event.target).prev().prev().offset().left + 4;
+		var rightLimit = scaleLeftSide + scaleWidth - 16 - scaleStart;
+		var leftLimit = $(event.target).prev().prev()
+		.offset().left + 4 - scaleStart + 10;
 		// Обработчик движения бегунка
 		$(this).mousemove(function(eventCursor) {
 			// Вычисление позиции курсора
 			var cursorPosition = eventCursor.pageX;
 			// Центрирование бегунка относительно курсора
-			var newElemPosition = cursorPosition - 18;
+			var newElemPosition = cursorPosition - scaleStart;
 			// Движение бегунка
 			if(newElemPosition < rightLimit && newElemPosition > leftLimit ) {
 				$(event.target).css('left', newElemPosition);
@@ -36,15 +39,19 @@ $(document).mousedown(function(event) {
 		})
 	// Левый бегунок
 	} else if ($(event.target).hasClass('range-slider__left-marker') === true) {
+		// Позиция начала шкалы
+		var scaleStart = $(event.target).parent().offset().left;
 		// Вычисление пределов движения бегунка
-		var leftLimit = $(event.target).parent().offset().left - 12;
-		var rightLimit = $(event.target).next().next().offset().left - 26;
+		var leftLimit = $(event.target).parent()
+		.offset().left - 2 - scaleStart;
+		var rightLimit = $(event.target).next().next()
+		.offset().left - 16 - scaleStart;
 		// Обработчик движения бегунка
 		$(this).mousemove(function(eventCursor) {
 			// Вычисление позиции курсора
 			var cursorPosition = eventCursor.pageX;
 			// Центрирование бегунка относительно курсора
-			var newElemPosition = cursorPosition - 18;
+			var newElemPosition = cursorPosition - scaleStart;
 			// Движение бегунка
 			if(newElemPosition < rightLimit && newElemPosition > leftLimit ) {
 				$(event.target).css('left', newElemPosition);
@@ -72,6 +79,8 @@ $(document).mousedown(function(event) {
 })
 // Функция установки начальных параметров виджета
 function rangeSliderInitializing() {
+	// Включение шкалы
+	$(document).find('.range-slider__scale').css('display', 'flex');
 	// Левый бегунок
 	$(document).find('.range-slider__lower-price').each(function(){
 		var lowerPrice = Number($(this).text().replace(' ', ''));
@@ -93,13 +102,10 @@ function rangeSliderInitializing() {
 		var lowerPrice = Number($(this).prev()
 		.find('.range-slider__lower-price').text().replace(' ', ''));
 		var leftMarkerPosition = lowerPrice / 100 + 1;
-		console.log('left: ' + leftMarkerPosition)
 		var topPrice = Number($(this).next()
 		.find('.range-slider__top-price').text().replace(' ', ''));
 		var rightMarkerPosition = topPrice / 100 + 1;
-		console.log('right: ' + rightMarkerPosition);
 		var mercuryWidth = rightMarkerPosition - leftMarkerPosition;
-		console.log(mercuryWidth);
 		var mercuryStyle = {
 			left: String(leftMarkerPosition) + 'px',
 			width: String(mercuryWidth) + 'px'
