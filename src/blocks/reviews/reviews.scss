@@ -1,0 +1,36 @@
+.reviews__head {
+	display: flex;
+	justify-content: space-between;
+}
+
+.reviews__title {
+	@include secondary_font;
+	font-size: 19px;
+	line-height: 24px;
+	color: $dark;
+}
+
+.reviews__number {
+	@include main_font;
+	font-size: 14px;
+	line-height: 14px;
+	color: $dark50;
+	margin-top: 7px;
+	margin-right: -1px;
+}
+
+.reviews__body {
+	margin-top: 20px;
+}
+
+.reviews__review {
+	margin-bottom: 23px;
+}
+
+.reviews__review:last-child {
+	margin-bottom: 0;
+	.review__user-icon {
+		background: url('../img/user_stioklishkova.png');
+		background-position: -22px -12px;
+	}
+}
