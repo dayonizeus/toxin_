@@ -1,0 +1,46 @@
+.review {
+	width: 710px;
+	display: flex;
+}
+
+.review__interactive-part {
+	width: 58px;
+}
+
+.review__likes {
+	margin-left: 4px;
+	margin-top: 12px;
+}
+
+.review__user-icon {
+	width: 48px;
+	height: 48px;
+	border: 2px solid $background_color;
+	border-radius: 50%;
+	background: url('../img/user_sarafanov.png');
+	background-repeat: no-repeat;
+	background-position: -22px -12px;
+}
+
+.review__text-part {
+	margin-left: 9px;
+}
+
+.review__user-name {
+	@include main_font_bold;
+	font-size: 14px;
+	line-height: 24px;
+	color: $dark75;
+}
+
+.review__recency {
+	@include main_font;
+	font-size: 14px;
+	line-height: 24px;
+	color: $dark75;
+}
+
+.review__body {
+	@extend .review__recency;
+	margin-top: 10px;
+}

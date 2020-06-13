@@ -1,0 +1,9 @@
+mixin review(likes_num, userName_str, sinceDays_num, review_str)
+	div(class!=attributes.class)
+		.review__interactive-part
+			.review__user-icon
+			+button-like(likes_num)(class='review__likes button-like')
+		.review__text-part
+			.review__user-name= userName_str
+			div(class='review__recency', value=sinceDays_num)
+			.review__body= review_str

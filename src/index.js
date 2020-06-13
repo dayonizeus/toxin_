@@ -7,3 +7,4 @@ import './blocks/range-slider/range-slider';
 import './blocks/dropdown-interior/dropdown-interior';
 import './blocks/satisfaction-chart/satisfaction-chart';
 import './blocks/button-like/button-like';
+import './blocks/review/review';
