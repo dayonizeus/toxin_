@@ -1,0 +1,101 @@
+.satisfaction-chart {
+	width: 311px;
+	height: 170px;
+	background: $background_color;
+}
+
+.satisfaction-chart__title {
+	@include secondary_font;
+	font-size: 19px;
+	line-height: 24px;
+	color: $dark;
+}
+
+.satisfaction-chart__body {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 21px;
+}
+
+.satisfaction-chart__graph {
+	position: relative;
+}
+
+.satisfaction-chart__graph-inner {
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	width: 110px;
+	height: 110px;
+	border-radius: 50%;
+	background: $background_color;
+	padding-top: 30px;
+}
+
+.satisfaction-chart__total {
+	@include secondary_font;
+	font-size: 24px;
+	line-height: 30px;
+	color: $primary;
+	text-align: center;
+}
+
+.satisfaction-chart__total-label {
+	@include main_font_bold;
+	font-size: 12px;
+	line-height: 15px;
+	text-transform: uppercase;
+	color: $primary;
+	text-align: center;
+}
+
+.satisfaction-chart__keyword {
+	margin-top: 26px;
+}
+
+.satisfaction-chart__great {
+	display: flex;
+	.satisfaction-chart__grade-marker {
+		background: $third_gradient;
+	}
+}
+
+.satisfaction-chart__good {
+	@extend .satisfaction-chart__great;
+	.satisfaction-chart__grade-marker {
+		background: $secondary_gradient;
+	}
+}
+
+.satisfaction-chart__satisfactorily {
+	@extend .satisfaction-chart__great;
+	.satisfaction-chart__grade-marker {
+		background: $primary_gradient;
+	}
+}
+
+.satisfaction-chart__unsatisfactorily {
+	@extend .satisfaction-chart__great;
+	.satisfaction-chart__grade-marker {
+		background: $fourth_gradient;
+	}
+}
+
+.satisfaction-chart__grade-marker {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	margin-top: 7px;
+	margin-right: 5px;
+}
+
+.satisfaction-chart__grade-label {
+	@include main_font;
+	font-size: 14px;
+	line-height: 24px;
+	color: $dark75;
+}
+
+.satisfaction-chart__grade-value {
+	display: none;
+}

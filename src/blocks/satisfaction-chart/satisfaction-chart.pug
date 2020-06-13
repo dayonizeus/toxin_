@@ -1,0 +1,26 @@
+mixin satisfaction-chart(great, good, satisfactorily, unsatisfactorily)
+	div(class!=attributes.class)
+		.satisfaction-chart__title Впечатления от номера
+		.satisfaction-chart__body
+			.satisfaction-chart__graph
+				canvas(width='120', height='120' class='satisfaction-chart__graph-border')
+				.satisfaction-chart__graph-inner
+					.satisfaction-chart__total= great + good + satisfactorily + unsatisfactorily
+					.satisfaction-chart__total-label
+			.satisfaction-chart__keyword
+				.satisfaction-chart__great
+					.satisfaction-chart__grade-marker
+					.satisfaction-chart__grade-label Великолепно
+					.satisfaction-chart__grade-value= great
+				.satisfaction-chart__good
+					.satisfaction-chart__grade-marker
+					.satisfaction-chart__grade-label Хорошо
+					.satisfaction-chart__grade-value= good
+				.satisfaction-chart__satisfactorily
+					.satisfaction-chart__grade-marker
+					.satisfaction-chart__grade-label Удовлетворительно
+					.satisfaction-chart__grade-value= satisfactorily
+				.satisfaction-chart__unsatisfactorily
+					.satisfaction-chart__grade-marker
+					.satisfaction-chart__grade-label Разочарован
+					.satisfaction-chart__grade-value= unsatisfactorily
