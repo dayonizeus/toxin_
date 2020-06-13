@@ -13,6 +13,12 @@
 .icon-keyboard_arrow_down:before {
   content: "\e901";
 }
+.icon-keyboard_arrow_left:before {
+  content: "\e90a";
+}
+.icon-keyboard_arrow_right:before {
+  content: "\e90b";
+}
 .icon-arrow_back:before {
   content: "\e908";
 }
@@ -21,6 +27,9 @@
 }
 .icon-location_city:before {
   content: "\e903";
+}
+.icon-whatshot:before {
+  content: "\e909";
 }
 .icon-star:before {
   content: "\e904";

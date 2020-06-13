@@ -1,0 +1,23 @@
+mixin room-features(title_str, features_listOfStr)
+	div(class!=attributes.class)
+		.room-features__head= title_str
+		.room-features__body
+			each feature in features_listOfStr
+				if feature === 'sound'
+					.room-features__feature.room-features__sound
+						.room-features__feature-icon
+						.room-features__feature-description
+							.room-features__feature-title Комфорт
+							.room-features__feature-body Шумопоглощающие стены
+				else if feature === 'windows'
+					.room-features__feature.room-features__windows
+						.room-features__feature-icon
+						.room-features__feature-description
+							.room-features__feature-title Удобство
+							.room-features__feature-body Окно в каждой из спален
+				else if feature === 'hearth'
+					.room-features__feature.room-features__hearth
+						.room-features__feature-icon
+						.room-features__feature-description
+							.room-features__feature-title Уют
+							.room-features__feature-body Номер оснащён камином

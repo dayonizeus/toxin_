@@ -1,0 +1,68 @@
+.room-features__head {
+	@include secondary_font;
+	font-size: 19px;
+	line-height: 24px;
+	color: $dark;
+	padding-bottom: 19px;
+}
+
+.room-features__feature {
+	width: 280px;
+	border-bottom: 1px solid $dark10;
+	padding-bottom: 20px;
+	margin-bottom: 19px;
+	display: flex;
+}
+
+.room-features__feature:last-child {
+	border: none;
+}
+
+.room-features__sound {
+	.room-features__feature-icon::before {
+		content: '\e900';
+	}
+}
+
+.room-features__windows {
+	.room-features__feature-icon::before {
+		content: '\e903';
+	}
+}
+
+.room-features__hearth {
+	.room-features__feature-icon::before {
+		content: '\e909';
+	}
+}
+
+.room-features__feature-icon {
+	width: 48px;
+	height: 48px;
+	position: relative;
+	&::before {
+		position: absolute;
+		@include material_icon;
+		@include text_primary_gradient;
+		font-size: 48px;
+	}
+}
+
+.room-features__feature-description {
+	padding-top: 1px;
+	padding-left: 10px;
+}
+
+.room-features__feature-title {
+	@include main_font_bold;
+	font-size: 14px;
+	line-height: 24px;
+	color: $dark75;
+}
+
+.room-features__feature-body {
+	@include main_font;
+	font-size: 14px;
+	line-height: 24px;
+	color: $dark75;
+}
