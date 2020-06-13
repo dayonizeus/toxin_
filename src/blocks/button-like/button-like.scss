@@ -1,4 +1,4 @@
-.like-button {
+.button-like {
 	width: 40px;
 	height: 20px;
 	background: $background_color;
@@ -12,7 +12,7 @@
 	position: relative;
 }
 
-.like-button::before {
+.button-like::before {
 	@include material_icon;
 	position: absolute;
 	top: 5px;
@@ -22,8 +22,8 @@
 	line-height: 9px;
 }
 
-.like-button--active {
-	@extend .like-button;
+.button-like--active {
+	@extend .button-like;
 	border: 1px solid $primary;
 	color: $primary;
 	&::before {
