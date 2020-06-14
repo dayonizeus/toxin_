@@ -6,7 +6,6 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 module.exports = {
   	entry: {
       index: './src/index.js',
-      // landing: './src/pages/landing.js'
   },
   	devServer: {
       // index: 'landing.html',
@@ -19,14 +18,16 @@ module.exports = {
   			template: './src/pug/index.pug',
         filename: 'index.html'
   		}),
-      // new HtmlWebpackPlugin({
-      //   template: './src/pages/landing.pug',
-      //   filename: 'landing.html'
-      // }),
-  		new MiniCssExtractPlugin()
+      new HtmlWebpackPlugin({
+        template: './src/pages/landing/landing.pug',
+        filename: 'landing.html'
+      }),
+  		new MiniCssExtractPlugin({
+        filename: 'style.css'
+      })
   	],
   	output: {
-    filename: '[name].js',
+    filename: 'script.js',
     path: path.resolve(__dirname, 'dist')
   	},
   	module: {
@@ -55,11 +56,21 @@ module.exports = {
   			},
   			{
   				test: /\.(woff|woff2|ttf|svg)$/,
-  				loader: ['file-loader']
+  				loader: [{
+            loader: 'file-loader',
+            options: {
+              outputPath: 'assets/fonts'
+            }
+          }]
   			},
         {
           test: /\.png$/,
-          use: ['file-loader']
+          loader: [{
+            loader: 'file-loader',
+            options: {
+              outputPath: 'assets/img'
+            }
+          }]
         }
   		]
   	}
