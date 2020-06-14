@@ -6,10 +6,10 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 module.exports = {
   	entry: {
       index: './src/index.js',
-      landing: './src/pages/landing.js'
+      // landing: './src/pages/landing.js'
   },
   	devServer: {
-      index: 'landing.html',
+      // index: 'landing.html',
       stats: 'errors-only',
   		contentBase: './dist'
   	},
@@ -19,10 +19,10 @@ module.exports = {
   			template: './src/pug/index.pug',
         filename: 'index.html'
   		}),
-      new HtmlWebpackPlugin({
-        template: './src/pages/landing.pug',
-        filename: 'landing.html'
-      }),
+      // new HtmlWebpackPlugin({
+      //   template: './src/pages/landing.pug',
+      //   filename: 'landing.html'
+      // }),
   		new MiniCssExtractPlugin()
   	],
   	output: {
