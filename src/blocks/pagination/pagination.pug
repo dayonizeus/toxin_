@@ -1,0 +1,11 @@
+mixin pagination(title_str)
+	div(class!=attributes.class)
+		.pagination__title= title_str
+		.pagination__body
+			a.pagination__link.pagination__link-current 1
+			a.pagination__link 2
+			a.pagination__link 3
+			a.pagination__link ...
+			a.pagination__link 15
+			a.pagination__link.pagination__link-next
+		.pagination__label 1 &ndash; 12 из 100+ вариантов аренды
