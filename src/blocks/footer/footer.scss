@@ -2,6 +2,7 @@
 	max-width: 100%;
 	background: $background_color;
 	padding-top: 100px;
+	border-top: 1px solid $dark25;
 	@media screen and (max-width: 1023px) {
 		padding-top: 15px;
 	}
