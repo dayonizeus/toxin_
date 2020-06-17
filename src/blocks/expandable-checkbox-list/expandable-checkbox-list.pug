@@ -1,0 +1,8 @@
+mixin expandable-checkbox-list(title_str, options_listOfStr)
+	div(class!=attributes.class)
+		.expandable-checkbox-list__title
+			.expandable-checkbox-list__title-text= title_str
+			.expandable-checkbox-list__title-icon
+		.expandable-checkbox-list__options
+			for option in options_listOfStr
+				+checkbox-button(option)(class='expandable-checkbox-list__button checkbox-button'	)
