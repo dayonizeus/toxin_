@@ -5,7 +5,7 @@
 .search-room__main {
 	display: flex;
 	margin-top: 15px;
-	@media screen and (max-width: 1281px) {
+	@media screen and (max-width: 1339px) {
 		justify-content: space-between;
 		max-width: 100%;
 		overflow-x: hidden;
@@ -17,7 +17,7 @@
 
 .search-room__filter {
 	margin-left: 140px;
-	@media screen and (max-width: 1281px) {
+	@media screen and (max-width: 1339px) {
 		margin-left: 10px;
 	}
 	@media screen and (max-width: 801px) {
@@ -93,7 +93,7 @@
 .search-room__card-rooms-list {
 	display: flex;
 	flex-wrap: wrap;
-	@media screen and (max-width: 1281px) {
+	@media screen and (max-width: 1339px) {
 		justify-content: space-between;
 	}
 	@media screen and (max-width: 541px) {
@@ -104,7 +104,7 @@
 .search-room__card-room {
 	margin-right: 12px;
 	margin-top: 20px;
-	@media screen and (max-width: 1281px) {
+	@media screen and (max-width: 1339px) {
 		margin-right: 0;
 	}
 }
@@ -117,7 +117,7 @@
 .search-room__pagination {
 	margin-top: 26px;
 	margin-left: -156px;
-	@media screen and (max-width: 1281px) {
+	@media screen and (max-width: 1339px) {
 		margin-left: 0;
 	}
 }
