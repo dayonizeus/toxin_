@@ -1,0 +1,12 @@
+.rich-checkbox-buttons__title {
+	@include main_font_bold;
+	font-size: 12px;
+	line-height: 15px;
+	text-transform: uppercase;
+	color: $dark;
+	margin-bottom: 16px;
+}
+
+.rich-checkbox-buttons_option {
+	margin-bottom: 9px;
+}

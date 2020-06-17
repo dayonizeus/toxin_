@@ -1,0 +1,5 @@
+mixin rich-checkbox-buttons(title_str, options_listOfLists)
+	div(class!=attributes.class)
+		.rich-checkbox-buttons__title= title_str
+		for option in options_listOfLists
+			+rich-checkbox-button(option[0], option[1])(class='rich-checkbox-buttons_option rich-checkbox-button')
