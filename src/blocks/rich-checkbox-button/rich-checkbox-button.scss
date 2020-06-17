@@ -9,16 +9,16 @@
 }
 
 .rich-checkbox-button__checkmark-border {
-	width: 18px;
-	height: 18px;
+	width: 20px;
+	height: 20px;
 	background: $background_color;
 	border: 1px solid $dark25;
 	border-radius: $corner_rounding;
 }
 
 .rich-checkbox-button__checkmark {
-	width: 4px;  
-	height: 6px;  
+	width: 6px;  
+	height: 8px;  
 	background: $background_color;  
 	border: 2px solid transparent;  
 	-moz-border-image: -moz-linear-gradient(top, #BC9CFF 0%, #8BA4F9 100%);  
@@ -41,6 +41,7 @@
 
 .rich-checkbox-button__label {
 	@include main_font_bold;
+	width: 236px;
 	font-size: 14px;
 	line-height: 18px;
 	color: $dark75;
@@ -50,8 +51,10 @@
 
 .rich-checkbox-button__content {
 	@include main_font;
+	width: 225px;
 	font-size: 12px;
 	line-height: 14px;
 	color: $dark50;
 	padding-top: 6px;
+	white-space: pre-wrap;
 }
