@@ -43,6 +43,9 @@
 .date-dropdown--right-handle {
 	.date-dropdown__calendar {
 		left: -170px;
+		@media screen and (max-width: 479px) {
+			left: -150px;
+		}
 	}
 }
 
