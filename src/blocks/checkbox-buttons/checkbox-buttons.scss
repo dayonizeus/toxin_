@@ -1,0 +1,16 @@
+.checkbox-buttons {
+	width: 222px;
+}
+
+.checkbox-buttons__title {
+	@include main_font_bold;
+	font-size: 12px;
+	line-height: 15px;
+	text-transform: uppercase;
+	color: $dark;
+	padding-bottom: 17px;
+}
+
+.checkbox-buttons__button {
+	margin-bottom: 10px;
+}

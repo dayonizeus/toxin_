@@ -1,0 +1,5 @@
+mixin checkbox-buttons(title_str, options_listOfStr)
+	div(class!=attributes.class)
+		.checkbox-buttons__title= title_str
+		for option in options_listOfStr
+			+checkbox-button(option)(class='checkbox-buttons__button checkbox-button')
