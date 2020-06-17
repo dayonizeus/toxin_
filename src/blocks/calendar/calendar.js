@@ -200,45 +200,42 @@ $('.calendar__data').click(function() {
 		var arrivalDate = new Date(arrivalYear, arrivalMonth, arrivalDay);
 		// Обрабатываем поля с датой больше начальной
 		if (selectingDate > arrivalDate) {
-				$(this).closest('.calendar__main')
-				.find('.calendar__month-day--selected')
-				.removeClass('calendar__month-day--selected')
-				.addClass('calendar__month-day');
-				$(this).closest('.calendar__main')
-				.find('.calendar__month-day--included')
-				.removeClass('calendar__month-day--included')
-				.addClass('calendar__month-day');
-				$(this).closest('.calendar__main')
-				.find('.calendar__month-day--selected-start')
-				.removeClass('calendar__month-day--selected-start')
-				.addClass('calendar__month-day');
-				$(this).closest('.calendar__main')
-				.find('.calendar__month-day--selected-end')
-				.removeClass('calendar__month-day--selected-end')
-				.addClass('calendar__month-day');
-				$(this).closest('.calendar__main').find('.calendar__month-day')
-				.each(function() {
-					var iterYear = $(this).closest('.calendar')
-					.find('.calendar__month').text().split(' ')[1];
-					var iterMonth =  $(this).closest('.calendar')
-					.find('.calendar__month').text().split(' ')[0];
-					iterMonth = months.indexOf(iterMonth);
-					var iterDay = $(this).text();
-					var iterDate = new Date(iterYear, iterMonth, iterDay);
-					console.log(arrivalDate);
-					console.log(iterDate);
-					if (arrivalDate < iterDate && selectingDate > iterDate) {
-						$(this).removeClass('calendar__month-day')
-						.addClass('calendar__month-day--included')
-					} else if (arrivalDate.getTime() === iterDate.getTime()) {
-						console.log('this');
-						$(this).removeClass('calendar__month-day')
-						.addClass('calendar__month-day--selected-start');
-					} else if (selectingDate.getTime() === iterDate.getTime()) {
-						$(this).removeClass('calendar__month-day')
-						.addClass('calendar__month-day--selected-end');
-					}
-				})
+			$(this).closest('.calendar__main')
+			.find('.calendar__month-day--selected')
+			.removeClass('calendar__month-day--selected')
+			.addClass('calendar__month-day');
+			$(this).closest('.calendar__main')
+			.find('.calendar__month-day--included')
+			.removeClass('calendar__month-day--included')
+			.addClass('calendar__month-day');
+			$(this).closest('.calendar__main')
+			.find('.calendar__month-day--selected-start')
+			.removeClass('calendar__month-day--selected-start')
+			.addClass('calendar__month-day');
+			$(this).closest('.calendar__main')
+			.find('.calendar__month-day--selected-end')
+			.removeClass('calendar__month-day--selected-end')
+			.addClass('calendar__month-day');
+			$(this).closest('.calendar__main').find('.calendar__month-day')
+			.each(function() {
+				var iterYear = $(this).closest('.calendar')
+				.find('.calendar__month').text().split(' ')[1];
+				var iterMonth =  $(this).closest('.calendar')
+				.find('.calendar__month').text().split(' ')[0];
+				iterMonth = months.indexOf(iterMonth);
+				var iterDay = $(this).text();
+				var iterDate = new Date(iterYear, iterMonth, iterDay);
+				if (arrivalDate < iterDate && selectingDate > iterDate) {
+					$(this).removeClass('calendar__month-day')
+					.addClass('calendar__month-day--included')
+				} else if (arrivalDate.getTime() === iterDate.getTime()) {
+					$(this).removeClass('calendar__month-day')
+					.addClass('calendar__month-day--selected-start');
+				} else if (selectingDate.getTime() === iterDate.getTime()) {
+					$(this).removeClass('calendar__month-day')
+					.addClass('calendar__month-day--selected-end');
+				}
+			})
 		}
 	}
 })
