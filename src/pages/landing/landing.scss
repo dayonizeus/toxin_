@@ -2,7 +2,7 @@ body {
 	max-width: 100%;
 }
 
-.main {
+.landing__main {
 	background: url('../img/lp_bg.png');
 	padding-top: 70px;
 	padding-left: 140px;
@@ -11,18 +11,17 @@ body {
 	@media screen and (max-width: 479px) {
 		padding-right: 0;
 		padding-left: 0;
-		background: $background-color; 
 	}
 }
 
-.main__top {
+.landing__main-top {
 	@media screen and (max-width: 1024px) {
 		display: flex;
 		justify-content: center;
 	}
 }
 
-.main__bottom {
+.landing__main-bottom {
 	display: flex;
 	justify-content: flex-end;
 	margin-top: 317px;
@@ -34,7 +33,7 @@ body {
 	}
 }
 
-.main__text {
+.landing__main-text {
 	@include main_font;
 	font-size: 14px;
 	line-height: 24px;
