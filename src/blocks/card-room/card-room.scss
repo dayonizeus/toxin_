@@ -1,6 +1,7 @@
 .card-room {
 	width: 270px;
 	height: 257.5px;
+	box-shadow: 0px 10px 20px $dark05;
 }
 
 .card-room--888 {
@@ -12,6 +13,66 @@
 .card-room--840 {
 	.card-room__main {
 		background: url('../img/840bg.png');
+	}
+}
+
+.card-room--980 {
+	.card-room__main {
+		background: url('../img/980bg.png');
+	}
+}
+
+.card-room--856 {
+	.card-room__main {
+		background: url('../img/856bg.png');
+	}
+}
+
+.card-room--740 {
+	.card-room__main {
+		background: url('../img/740bg.png');
+	}
+}
+
+.card-room--982 {
+	.card-room__main {
+		background: url('../img/982bg.png');
+	}
+}
+
+.card-room--678 {
+	.card-room__main {
+		background: url('../img/678bg.png');
+	}
+}
+
+.card-room--450 {
+	.card-room__main {
+		background: url('../img/450bg.png');
+	}
+}
+
+.card-room--350 {
+	.card-room__main {
+		background: url('../img/350bg.png');
+	}
+}
+
+.card-room--666 {
+	.card-room__main {
+		background: url('../img/666bg.png');
+	}
+}
+
+.card-room--444 {
+	.card-room__main {
+		background: url('../img/444bg.png');
+	}
+}
+
+.card-room--352 {
+	.card-room__main {
+		background: url('../img/352bg.png');
 	}
 }
 
@@ -72,7 +133,7 @@
 	display: flex;
 	position: relative;
 	bottom: 22px;
-	left: 213px;
+	margin-left: 213px;
 	width: 50px;
 }
 
@@ -111,7 +172,7 @@
 
 .card-room__room-number {
 	@include secondary_font;
-	font-size: 18px;
+	font-size: 19px;
 	line-height: 17px;
 	color: $dark;
 	&::first-letter {
