@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import {months, drawCalendar} from '../calendar/calendar';
+import {setPrice} from '../card-confirmation/card-confirmation';
 // Сворачивание/разворачивание формы по клику на поле ввода
 $('.date-dropdown__input-group').click(function() {
 	if ($(this).next().hasClass('date-dropdown__calendar--disabled') === true) {
@@ -119,5 +120,12 @@ $('.calendar__btn-apply').click(function() {
 		$(this).closest('.date-dropdown__calendar')
 		.removeClass('date-dropdown__calendar')
 		.addClass('date-dropdown__calendar--disabled');
+	}
+	// Логика для card-confirmation
+	if ($(this).closest('.date-dropdown')
+		.hasClass('card-confirmation__departure') === true) {
+		// getTotalDays(this);
+		// var totalDays = getTotalDays(this);
+		setPrice(this);
 	}
 })

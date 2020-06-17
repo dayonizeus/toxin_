@@ -18,13 +18,21 @@
 }
 
 .card-confirmation__room-number {
+	display: flex;
 	@include secondary_font;
 	font-size: 24px;
 	line-height: 17px;
 	color: $dark;
-	&::first-letter {
-		font-size: 14px;
-	}
+}
+
+.card-confirmation__room-number-label {
+	font-size: 14px;
+	padding-top: 5px;
+}
+
+.card-confirmation__room-number-value {
+	padding-top: 1px;
+	padding-left: 4px;
 }
 
 .card-confirmation__room-quality {
@@ -34,13 +42,14 @@
 	text-transform: uppercase;
 	color: $primary;
 	padding-top: 6px;
-	padding-left: 1px;
+	padding-left: 5px;
 }
 
 .card-confirmation__day-price {
 	display: flex;
 }
-.card-confirmation__day-price-numbers {
+.card-confirmation__day-price-value {
+	display: flex;
 	@include main_font_bold;
 	font-size: 14px;
 	line-height: 18px;
@@ -49,12 +58,13 @@
 	padding-right: 4px;
 }
 
-.card-confirmation__day-price-letters {
+.card-confirmation__day-price-label {
 	@include main_font;
 	font-size: 12px;
 	line-height: 18px;
 	color: $dark50;
 	padding-top: 5px;
+	padding-right: 1px;
 }
 
 .card-confirmatrion__time {
@@ -78,6 +88,7 @@
 .card-confirmation__for-days {
 	display: flex;
 	justify-content: space-between;
+	height: 18px;
 }
 
 .card-confirmation__service-charge {
@@ -90,8 +101,13 @@
 	display: flex;
 }
 
+.card-confirmation__service-charge-title-text {
+	width: 100px;
+	margin-left: 4px;
+}
+
 .card-confirmation__service-charge-title-info {
-	margin-left: 6px;
+	margin-left: 4px;
 	margin-top: -2px;
 }
 
@@ -121,6 +137,11 @@
 	line-height: 24px;
 	color: $dark;
 	margin-top: 29px;
+	padding-top: 1px;
+}
+
+.card-confirmation__total-title {
+	padding-left: 1px;
 }
 
 .card-confirmation__total-decoration {
@@ -131,4 +152,8 @@
 
 .card-confirmation__submit {
 	margin-top: 20px;
+	button {
+		padding-right: 6px;
+		padding-top: 2px;
+	}
 }

@@ -1,32 +1,36 @@
-mixin card-confirmation()
+mixin card-confirmation(roomNumber_num, roomQuality_str, price_num, fee_num, discount_num, addFee_num)
 	.div(class!=attributes.class)
 		.card-confirmation__header
 			.card-confirmation__room-details
-				.card-confirmation__room-number № 888
-				.card-confirmation__room-quality люкс
+				.card-confirmation__room-number
+					.card-confirmation__room-number-label №
+					.card-confirmation__room-number-value= roomNumber_num
+				.card-confirmation__room-quality= roomQuality_str
 			.card-confirmation__day-price
-				.card-confirmation__day-price-numbers 9 990&#8381;
-				.card-confirmation__day-price-letters в сутки
+				.card-confirmation__day-price-value
+					.card-confirmation__day-price-number= price_num
+					.card-confirmation__day-price-currency &#8381;
+				.card-confirmation__day-price-label в сутки
 		.card-confirmatrion__time
-			+date-dropdown('прибытие', '19.08.2019')(class='card-confirmation__arrival date-dropdown')
-			+date-dropdown('выезд', '23.08.2019')(class='card-confirmation__departure date-dropdown')
-		+dropdown('гости', '3 гостя', ['взрослые', 'дети', 'младенцы'])(class='card-confirmation__guests dropdown')
+			+date-dropdown('прибытие', 'ДД.ММ.ГГГГ')(class='card-confirmation__arrival date-dropdown')
+			+date-dropdown('выезд', 'ДД.ММ.ГГГГ')(class='card-confirmation__departure date-dropdown date-dropdown--right-handle')
+		+dropdown('гости', 'Гости', ['взрослые', 'дети', 'младенцы'])(class='card-confirmation__guests dropdown')
 		.card-confirmation__bill-details
 			.card-confirmation__for-days
-				.card-confirmation__for-days-title 9 990&#8381; x 4 суток
-				.card-confirmation__for-days-sum 39 960&#8381;
+				.card-confirmation__for-days-title
+				.card-confirmation__for-days-sum
 			.card-confirmation__service-charge
-				.card-confirmation__service-charge-title
-					.card-confirmation__service-charge-title-text Сбор за услуги: скидка 2 179&#8381;
+				.card-confirmation__service-charge-title Сбор за услуги:
+					.card-confirmation__service-charge-title-text= discount_num
 					+info-link()(class='card-confirmation__service-charge-title-info info-link')
-				.card-confirmation__service-charge-sum 0&#8381;
+				.card-confirmation__service-charge-sum= fee_num
 			.card-confirmation__additional-services
 				.card-confirmation__additional-services-title
 					.card-confirmation__additional-services-title-text Сбор за дополнительные услуги
 					+info-link()(class='card-confirmation__additional-services-title-info info-link')
-				.card-confirmation__additional-services-sum 300&#8381;
+				.card-confirmation__additional-services-sum= addFee_num
 		.card-confirmation__total
 			.card-confirmation__total-title Итого
 			.card-confirmation__total-decoration
-			.card-confirmation__total-sum 38 081&#8381;
+			.card-confirmation__total-sum
 		+button-decorated('забронировать')(class='card-confirmation__submit button-decorated')

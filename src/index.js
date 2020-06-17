@@ -10,3 +10,4 @@ import './blocks/button-like/button-like';
 import './blocks/review/review';
 import './blocks/card-room/card-room';
 import './blocks/expandable-checkbox-list/expandable-checkbox-list';
+import './blocks/card-confirmation/card-confirmation';
