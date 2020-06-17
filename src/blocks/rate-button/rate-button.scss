@@ -1,8 +1,22 @@
-.rate-button {
-
+.rate-button--three {
+	.rate-button__four {
+		display: none;
+	}
+	.rate-button__five {
+		display: none;
+	}
+	&::after {
+		@include material_icon;
+		@include text_primary_gradient;
+		font-size: 24px;
+		content: '\e904 \e904 \e904 \e905 \e905';
+	}
 }
 
 .rate-button--four {
+	.rate-button__three {
+		display: none;
+	}
 	.rate-button__five {
 		display: none;
 	}
@@ -16,6 +30,9 @@
 
 
 .rate-button--five {
+	.rate-button__three {
+		display: none;
+	}
 	.rate-button__four {
 		display: none;
 	}
