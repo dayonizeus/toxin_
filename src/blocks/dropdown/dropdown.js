@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import caseEnding from '../../js/helperFunctions';
+import {caseEnding} from '../../js/helperFunctions';
 
 // Раскрытие и сворачивание формы по клику на поле ввода
 $('.dropdown__input-group').click( function() {

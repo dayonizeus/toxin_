@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import caseEnding from '../../js/helperFunctions';
+import {caseEnding} from '../../js/helperFunctions';
 
 // Функция отрисовки круговой диаграммы
 function drawChart() {

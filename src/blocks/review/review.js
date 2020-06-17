@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import caseEnding from '../../js/helperFunctions';
+import {caseEnding} from '../../js/helperFunctions';
 
 function setReviewRecency() {
 	$('.review__recency').each(function() {

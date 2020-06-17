@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import caseEnding from '../../js/helperFunctions';
+import {caseEnding} from '../../js/helperFunctions';
 
 $('.card-room_reviews-quantity').each(function() {
 	var reviewsQuantity = Number($(this).text());
