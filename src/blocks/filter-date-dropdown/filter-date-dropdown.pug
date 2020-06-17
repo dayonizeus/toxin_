@@ -1,5 +1,6 @@
-mixin filter-date-dropdown(label, value)
+mixin filter-date-dropdown(label_str, value_str)
 	div(class!=attributes.class)
-		.filter-date-dropdown__label= label
-		input.filter-date-dropdown__input-form(type='text', value=value)
-		.filter-date-dropdown__input-form-icon keyboard_arrow_down
+		.filter-date-dropdown__label= label_str
+		.filter-date-dropdown__input-group
+			input.filter-date-dropdown__input-form(type='text', value=value_str)
+			.filter-date-dropdown__input-form-icon

@@ -24,7 +24,7 @@ $(document).click( function(event) {
 
 // Увеличение значения опции по клику на +
 $('.dropdown__option-increase').click( function() {
-	let dropdownOptionValue = $(this).prev().text();
+	var dropdownOptionValue = $(this).prev().text();
 	dropdownOptionValue = Number(dropdownOptionValue);
 	dropdownOptionValue += 1;
 	$(this).prev().text(dropdownOptionValue);
@@ -32,7 +32,7 @@ $('.dropdown__option-increase').click( function() {
 
 // Уменьшение значения опции по клику на -
 $('.dropdown__option-decrease').click( function() {
-	let dropdownOptionValue = $(this).next().text();
+	var dropdownOptionValue = $(this).next().text();
 	dropdownOptionValue = Number(dropdownOptionValue);
 	if (dropdownOptionValue > 0) {
 		dropdownOptionValue -= 1;
@@ -47,42 +47,48 @@ $('.dropdown__options-clean').click( function() {
 
 // Подверждение выбранных параметров по клику на "применить"
 $('.dropdown__options-apply').click( function() {
-	let totalGuest = 0;
-	let children = 0;
-	let babies = 0;
+	var totalGuest = 0;
+	var children = 0;
+	var babies = 0;
 	// Вычисление общего количества гостей
 	$(this).parent().prev().find('.dropdown__option-value').each( function() {
-		let dropdownOptionValue = $(this).text();
+		var dropdownOptionValue = $(this).text();
 		dropdownOptionValue = Number(dropdownOptionValue);
 		totalGuest += dropdownOptionValue;
 		// Вычисление количества детей
-		if ($(this).prev().prev().text() === 'Дети') {
+		if ($(this).prev().prev().text() === 'дети') {
 			children += dropdownOptionValue;
 		// Вычисление количества младенцев
-		} else if ($(this).prev().prev().text() === 'Младенцы') {
+		} else if ($(this).prev().prev().text() === 'младенцы') {
 			babies += dropdownOptionValue;
 		}
 	} )
 	// Общее количество гостей
-	let totalGuestLabel = caseEnding(totalGuest, " Гость", " Гостя", " Гостей");
+	var totalGuestLabel = caseEnding(totalGuest, " Гость", " Гостя", " Гостей");
 	// Количество детей из общего количества гостей
 	if (children > 0) {
-		let childrenLabel = caseEnding(children, " Ребёнок", " Ребёнка", " Детей");
+		var childrenLabel = caseEnding(children, " Ребёнок", " Ребёнка", " Детей");
 		var childrenValue = (', ' + children + childrenLabel);
 	} else {
 		var childrenValue = '';
 	}
 	// Количество младенцев из общего количества гостей
 	if (babies > 0) {
-		let babiesLabel = caseEnding(babies, " Младенец", " Младенца", " Младенцев");
+		var babiesLabel = caseEnding(babies, " Младенец", " Младенца", " Младенцев");
 		var babiesValue = (', ' + babies + babiesLabel);
 	} else {
 		var babiesValue = '';
 	}
 	// Запись результата выбора в результирующее поле ввода
 	if (totalGuest > 0) {
+		var resultString = totalGuest + totalGuestLabel + childrenValue + babiesValue;
+		var inputLength = Number($(this).closest('.dropdown__options').prev()
+		.find('.dropdown__input-form').css('width').replace('px', ''));
+		if (inputLength < 300) {
+			resultString = resultString.slice(0, 29) + '...';
+		}
 		$(this).parent().parent().prev().find('.dropdown__input-form')
-		.val(totalGuest + totalGuestLabel + childrenValue + babiesValue)
-		.parent().parent().removeClass('dropdown--selected').addClass('dropdown');
+		.val(resultString).parent().parent().removeClass('dropdown--selected')
+		.addClass('dropdown');
 	}
 } )
