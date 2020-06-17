@@ -7,6 +7,9 @@
 	box-shadow: 0px 10px 20px $dark05;
 	border-radius: $corner_rounding;
 	z-index: 1;
+	@media screen and (max-width: 479px) {
+		width: 300px;
+	}
 }
 
 .calendar__header {
