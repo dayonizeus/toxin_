@@ -1,4 +1,4 @@
-mixin card-room(room_number, quality, price, stars, reviews_quantity, reviews_unit)
+mixin card-room(roomNumber_str, quality_str, price_str, stars_num, reviewsQuantity_num)
 	div(class!=attributes.class)
 		.card-room__main
 			.card-room__nav-buttons
@@ -16,20 +16,22 @@ mixin card-room(room_number, quality, price, stars, reviews_quantity, reviews_un
 		.card-room__footer
 			.card-room__room-details
 				.card-room__room-location
-					.card-room__room-number= room_number
-					.card-room__room-quality= quality
+					.card-room__room-number= roomNumber_str
+					.card-room__room-quality= quality_str
 				.card-room__room-price
 					.card-room__price-view
-						.card-room__day-price= price
+						.card-room__day-price= price_str
 						.card-room__rur-symbol &#8381;
 					.card-room__unit в сутки
 			.card-room__delimiter
 			.card-room__review-block
-				case stars
+				case stars_num
+					when 3
+						+rate-button(class='rate-button--three card-room__stars')
 					when 4
 						+rate-button(class='rate-button--four card-room__stars')
 					when 5
 						+rate-button(class='rate-button--five card-room__stars')
 				.card-room__reviews
-					.card-room_reviews-quantity= reviews_quantity
-					.card-room_reviews-unit= reviews_unit
+					.card-room_reviews-quantity= reviewsQuantity_num
+					.card-room_reviews-unit

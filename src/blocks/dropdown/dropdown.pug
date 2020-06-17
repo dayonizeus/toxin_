@@ -1,12 +1,12 @@
-mixin dropdown(label, value, options)
+mixin dropdown(label_str, value_str, options_listOfStr)
 	div(class!=attributes.class)
-		.dropdown__label= label
+		.dropdown__label= label_str
 		.dropdown__input-group
-			input.dropdown__input-form(type='text', value=value)
+			input.dropdown__input-form(type='text', value=value_str)
 			.dropdown__input-form-icon
 		.dropdown__options
 			ul.dropdown__options-list
-				each val in options
+				each val in options_listOfStr
 					li.dropdown__option
 						p.dropdown__option-title= val
 						button.dropdown__option-decrease.button-switch -
