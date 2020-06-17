@@ -1,0 +1,35 @@
+include ../../pug/mixins.pug
+<!DOCTYPE html>
+html(lang="en")
+head
+	meta(charset="UTF-8")
+	title Search Room
+body
+	+header('default')(class='header')
+	.search-room__main
+		.search-room__filter
+			+filter-date-dropdown('даты пребывания в отеле', '19 авг - 23 авг')(class='search-room__date filter-date-dropdown')
+			+dropdown('гости', 'Гости', ['взрослые', 'дети', 'младенцы'])(class='search-room__guests dropdown')
+			+range-slider('диапазон цены', 5000, 10000, 'Стоимость за сутки пребывания в отеле')(class='search-room__slider range-slider')
+			+checkbox-buttons('checkbox buttons', ['Можно курить', 'Можно с питомцами', 'Можно пригласить гостей (до 10 человек)'])(class='search-room__allowed checkbox-buttons')
+			+rich-checkbox-buttons('доступность', [['Широкий коридор', 'Ширина коридоров в номере                не менее 91 см.'], ['Помошник для инвалидов', 'На 1 этаже вас встретит специалист и проводит до номера']])(class='search-room__availability rich-checkbox-buttons')
+			+dropdown-interior('Удобства номера', 'Удобства номера', ['спальни' ,'кровати' , 'ванные комнаты'])(class='search-room__amenities dropdown-interior')
+			+expandable-checkbox-list('дополнительные удобства', ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь'])(class='search-room__additional-amenities expandable-checkbox-list')
+		.search-room__rooms
+			.search-room__list-title Номера, которые мы для вас подобрали
+			.search-room__card-rooms-list
+				+card-room('№ 888', 'Люкс', '9 990', 5, 145)(class='search-room__card-room card-room card-room--888')
+				+card-room('№ 840', '', '9 900', 4, 65)(class='search-room__card-room card-room card-room--840')
+				+card-room('№ 980', 'Люкс', '8 500', 3, 35)(class='search-room__card-room card-room card-room--980')
+				+card-room('№ 856', '', '7 300', 5, 19)(class='search-room__card-room card-room card-room--856')
+				+card-room('№ 740', '', '6 600', 4, 44)(class='search-room__card-room card-room card-room--740')
+				+card-room('№ 982', '', '5 800', 3, 56)(class='search-room__card-room card-room card-room--982')
+				+card-room('№ 678', '', '5 500', 5, 45)(class='search-room__card-room card-room card-room--678')
+				+card-room('№ 450', '', '5 300', 4, 39)(class='search-room__card-room card-room card-room--450')
+				+card-room('№ 350', '', '5 000', 3, 77)(class='search-room__card-room card-room card-room--350')
+				+card-room('№ 666', '', '5 000', 5, 25)(class='search-room__card-room card-room card-room--666')
+				+card-room('№ 444', '', '5 000', 3, 15)(class='search-room__card-room card-room card-room--444')
+				+card-room('№ 352', '', '5 000', 3, 55)(class='search-room__card-room card-room card-room--352')
+			.search-room__pagination-wraper
+				+pagination('')(class='search-room__pagination pagination')
+	+footer()(class='search-room__footer footer')

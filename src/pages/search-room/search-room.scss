@@ -1,0 +1,127 @@
+.header, .search-room__main, .footer {
+	width: 1440px;
+}
+
+.search-room__main {
+	display: flex;
+	margin-top: 15px;
+	@media screen and (max-width: 1281px) {
+		justify-content: space-between;
+		max-width: 100%;
+		overflow-x: hidden;
+	}
+	@media screen and (max-width: 801px) {
+		flex-direction: column;
+	}
+}
+
+.search-room__filter {
+	margin-left: 140px;
+	@media screen and (max-width: 1281px) {
+		margin-left: 10px;
+	}
+	@media screen and (max-width: 801px) {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+	@media screen and (max-width: 541px) {
+		justify-content: center;
+	}
+}
+
+.search-room__date {
+	@media screen and (max-width: 541) {
+		margin: 0 auto;
+	}
+}
+
+.search-room__guests {
+	margin-top: 21px;
+	z-index: 10;
+	width: 266px;
+	.dropdown__options {
+		width: 266px;
+	}
+	@media screen and (max-width: 801px) {
+		margin-top: 0;
+	}
+}
+
+.search-room__slider {
+	margin-top: 31px;
+}
+
+.search-room__allowed {
+	margin-top: 29px;
+}
+
+.search-room__availability {
+	margin-top: 32px;
+	@media screen and (max-width: 801px) {
+		margin-top: 29px;
+	}
+}
+
+.search-room__amenities {
+	margin-top: 29px;
+	z-index: 10;
+}
+
+.search-room__additional-amenities {
+	margin-top: 16px;
+}
+
+.search-room__rooms {
+	margin-left: 60px;
+	@media screen and (max-width: 801px) {
+		margin-left: 0;
+	}
+}
+
+.search-room__list-title {
+	@include secondary_font;
+	font-size: 24px;
+	line-height: 30px;
+	color: $dark;
+	margin-left: -1px;
+	@media screen and (max-width: 801px) {
+		text-align: center;
+	}
+}
+
+.search-room__card-rooms-list {
+	display: flex;
+	flex-wrap: wrap;
+	@media screen and (max-width: 1281px) {
+		justify-content: space-between;
+	}
+	@media screen and (max-width: 541px) {
+		justify-content: center;
+	}
+}
+
+.search-room__card-room {
+	margin-right: 12px;
+	margin-top: 20px;
+	@media screen and (max-width: 1281px) {
+		margin-right: 0;
+	}
+}
+
+.search-room__pagination-wraper {
+	display: flex;
+	justify-content: center;
+}
+
+.search-room__pagination {
+	margin-top: 26px;
+	margin-left: -156px;
+	@media screen and (max-width: 1281px) {
+		margin-left: 0;
+	}
+}
+
+.search-room__footer {
+	margin-top: 72px;
+}
