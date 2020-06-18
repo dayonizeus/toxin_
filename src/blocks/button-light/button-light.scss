@@ -1,16 +1,24 @@
 .button-light {
-	width: 87px;
-	height: 34px;
+	width: 99px;
+	height: 44px;
 	border-radius: $button_rounding;
-	border: 2px solid $primary;
-	background: $background_color;
+	border: none;
+	background: $primary_gradient;
 	text-align: center;
 	color: $primary;
 	@include main_font_bold;
 	font-size: 12px;
-	line-height: 15px;
+	line-height: 40px;
+	padding: 2px;
 	text-transform: uppercase;
 	&:active {
 		opacity: 0.5;
 	}
+}
+
+.button-light__inner {
+	width: 95px;
+	height: 40px;
+	border-radius: $button_rounding;
+	background: $background_color;
 }

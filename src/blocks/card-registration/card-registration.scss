@@ -9,10 +9,12 @@
 
 .card-registration__title {
 	@include card_title;
+	padding-top: 1px;
+	padding-left: 1px;
 }
 
 .card-registration__name {
-	margin-top: 16px;
+	margin-top: 15px;
 }
 
 .card-registration_surname {
@@ -21,10 +23,14 @@
 
 .card-registration__gender {
 	margin-top: -6px;
+	margin-left: 1px;
 }
 
 .card-registration__age {
 	margin-top: 23px;
+	.text-field__input-form {
+		padding-bottom: 4px;
+	}
 }
 
 .card-registration__email {
@@ -41,7 +47,8 @@
 }
 
 .card-registration__submit {
-	margin-top: 22px;
+	margin-top: 23px;
+	margin-left: 1px;
 }
 
 .card-registration__footer {
@@ -54,6 +61,6 @@
 	@include main_font;
 	font-size: 14px;
 	line-height: 18px;
-	margin-top: 13px;
+	margin-top: 12px;
 	margin-left: 1px;
 }

@@ -11,7 +11,8 @@ module.exports = {
       // index: 'html/index.html',
       // index: 'html/landing.html',
       // index: 'html/search-room.html',
-      index: 'html/room-details.html',
+      // index: 'html/room-details.html',
+      index: 'html/access.html',
       stats: 'errors-only',
   		contentBase: path.resolve(__dirname, 'dist')
   	},
@@ -32,6 +33,10 @@ module.exports = {
       new HtmlWebpackPlugin({
         template: './src/pages/room-details/room-details.pug',
         filename: 'html/room-details.html'
+      }),
+      new HtmlWebpackPlugin({
+        template: './src/pages/access/access.pug',
+        filename: 'html/access.html'
       }),
   		new MiniCssExtractPlugin({
         filename: 'style.css'

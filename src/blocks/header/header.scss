@@ -1,5 +1,5 @@
 .header {
-	max-width: 100%;
+	// max-width: 100%;
 	background-color: $background_color;
 	padding-top: 15px;
 	padding-bottom: 15px;
@@ -121,6 +121,13 @@
 
 .header__button-sign-in {
 	margin-right: 20px;
+	width: 87px;
+	height: 34px;
+	line-height: 30px;
+	.button-light__inner {
+		width: 83px;
+		height: 30px;
+	}
 	@media screen and (max-width: 479px) {
 		margin-right: 0;
 		margin-bottom: 10px;

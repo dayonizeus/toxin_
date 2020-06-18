@@ -1,0 +1,13 @@
+include ../../pug/mixins.pug
+<!DOCTYPE html>
+html(lang="en")
+head
+	meta(charset="UTF-8")
+	title Document
+body
+	+header('default')(class='access__header header')
+	.access__main--registration
+		+card-registration()(class='access__registration card-registration')
+	.access__main--login
+		+card-login()(class='access__login card-login')
+	+footer()(class='access__footer footer')

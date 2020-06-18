@@ -9,29 +9,47 @@
 
 .card-login__title {
 	@include card_title;
+	margin-top: 1px;
+	margin-left: 1px;
 }
 
 .card-login__email {
-	margin-top: 17px;
+	margin-top: 15px;
+	.text-field__input-form {
+		padding-bottom: 4px;
+	}
 }
 
 .card-login__password {
 	margin-top: 5px;
+	.text-field__input-form {
+		padding-bottom: 4px;
+	}
 }
 
 .card-login__submit {
-	margin-top: 19px;
+	margin-top: 20px;
+	margin-left: 1px;
+	width: 320px;
 }
 
 .card-login__footer {
 	display: flex;
 	justify-content: space-between;
 	margin-top: 30px;
+	margin-left: 1px;
 }
 
 .card-login__footer-text {
 	@include main_font;
 	font-size: 14px;
 	line-height: 18px;
-	margin-top: 13px;
+	margin-top: 12px;
+}
+
+.card-login__footer-button {
+	margin-right: -1px;
+	.button-light__inner {
+		padding-right: 2px;
+	}
 }
