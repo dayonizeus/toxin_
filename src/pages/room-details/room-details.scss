@@ -1,5 +1,8 @@
-.room-details__header, .room-details__footer, .room-details__main {
-	width: 1440px;
+.room-details__main {
+	width: 100%;
+	@media screen and (max-width: 767px) {
+		overflow-x: hidden;
+	}
 }
 
 .room-details__header {
@@ -20,6 +23,9 @@
 	width: 459px;
 	height: 243px;
 	background: url('../img/888_2.png');
+	@media screen and (max-width: 981px) {
+		display: none;
+	}
 }
 
 
@@ -27,6 +33,9 @@
 	width: 459px;
 	height: 242px;
 	background: url('../img/888_3.png');
+	@media screen and (max-width: 981px) {
+		display: none;
+	}
 }
 
 .room-details__details {
@@ -36,26 +45,58 @@
 	margin-left: 140px;
 	margin-right: 140px;
 	margin-bottom: 70px;
+	@media screen and (max-width: 1339px) {
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	@media screen and (max-width: 1279px) {
+		display: block;
+	}
 }
 
 .room-details__info {
 	display: flex;
 	justify-content: space-between;
+	@media screen and(max-width: 767px) {
+		flex-direction: column;
+		align-items: center;
+	}
 }
 
 .room-details__graph {
 	margin-right: 38px;
+	@media screen and (max-width: 479px) {
+		margin-right: 0;
+	}
 }
 
 .room-details__reviews {
 	margin-top: -6px;
 	margin-left: -1px;
+	@media screen and (max-width: 767px) {
+		width: 95%;
+		margin-top: 20px;
+	}
+	.review__body {
+		@media screen and (max-width: 767px) {
+			width: 80%;
+		}
+		@media screen and (max-width: 599px) {
+			width: 60%;
+		}
+		@media screen and (max-width: 479px) {
+			width: 35%;
+		}
+	}
 }
 
 .room-details__info-2 {
 	display: flex;
 	justify-content: space-between;
 	margin-top: 33px;
+	@media screen and (max-width: 479px) {
+		flex-direction: column;
+	}
 }
 
 .room-details__rules {
@@ -89,4 +130,29 @@
 	font-size: 14px;
 	line-height: 24px;
 	color: $dark75;
+	@media screen and (max-width: 479px) {
+		width: 80%;
+	}
+}
+
+.room-details__card {
+	@media screen and(max-width: 1279px) {
+		margin-top: 20px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	@media screen and (max-width: 479px) {
+		width: 301px;
+		padding-left: 0;
+	}
+	.card-confirmation__total-decoration {
+		@media screen and (max-width: 479px) {
+		width: 60px;
+		}
+	}
+	.dropdown__input-group {
+		@media screen and (max-width: 479px) {
+		width: 300px;
+		}
+	}
 }
