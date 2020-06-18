@@ -1,5 +1,10 @@
+.bullet-list {
+	background: $background_color;
+}
+
 .bullet-list__label {
 	@include input_label;
+	text-transform: none;
 }
 
 .bullet-list__option {
@@ -9,19 +14,19 @@
 }
 
 .bullet-list__marker {
-	@include material_icon;
-	top: 0;
-	left: 0;
-	color: $dark25;
-	font-size: 12px;
-	padding-top: 6px;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: $dark25;
+	margin-top: 7px;
 }
 
 .bullet-list__content {
+	width: 240px;
 	@include main_font;
 	font-size: 14px;
 	line-height: 24px;
 	color: $dark75;
-	padding-left: 10px;
+	margin-left: 10px;
 
 }
