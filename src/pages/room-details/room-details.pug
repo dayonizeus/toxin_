@@ -1,0 +1,27 @@
+include ../../pug/mixins.pug
+<!DOCTYPE html>
+html(lang="en")
+head
+	meta(charset="UTF-8")
+	title Room Details
+body
+	+header('default')(class='room-details__header header')
+	.room-details__main
+		.room-details__room-images
+			.room-details__main-image
+			.room-details__secondary-images
+				.room-details__secondary-image-1
+				.room-details__secondary-image-2
+		.room-details__details
+			.room-details__inner
+				.room-details__info
+					+room-features('Сведения о номере', ['sound', 'windows', 'hearth'])(class='room-details__features room-features')
+					+satisfaction-chart(130, 65, 65, 0)(class='room-details__graph satisfaction-chart')
+				+reviews()(class='room-details__reviews reviews')
+				.room-details__info-2
+					+bullet-list('Правила', ['Нельзя с питомцами','Без вечеринок и мероприятий','Время прибытия — после 13:00, а выезд до 12:00'])(class='room-details__rules bullet-list')
+					.room-details__discard
+						.room-details__discard-title Отмена
+						.room-details__discard-body Бесплатная отмена в течении 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+			+card-confirmation(888, 'люкс', 9990, 0, 2179, 300)(class='room-details__card card-confirmation')
+	+footer()(class='room-details__footer footer')
