@@ -8,19 +8,30 @@ module.exports = {
       index: './src/index.js',
   },
   	devServer: {
-      // index: 'landing.html',
+      // index: 'html/index.html',
+      // index: 'html/landing.html',
+      // index: 'html/search-room.html',
+      index: 'html/room-details.html',
       stats: 'errors-only',
-  		contentBase: './dist'
+  		contentBase: path.resolve(__dirname, 'dist')
   	},
   	plugins: [
   		new CleanWebpackPlugin(),
   		new HtmlWebpackPlugin({
   			template: './src/pug/index.pug',
-        filename: 'index.html'
+        filename: 'html/index.html'
   		}),
       new HtmlWebpackPlugin({
         template: './src/pages/landing/landing.pug',
-        filename: 'landing.html'
+        filename: 'html/landing.html'
+      }),
+      new HtmlWebpackPlugin({
+        template: './src/pages/search-room/search-room.pug',
+        filename: 'html/search-room.html'
+      }),
+      new HtmlWebpackPlugin({
+        template: './src/pages/room-details/room-details.pug',
+        filename: 'html/room-details.html'
       }),
   		new MiniCssExtractPlugin({
         filename: 'style.css'
@@ -59,16 +70,16 @@ module.exports = {
   				loader: [{
             loader: 'file-loader',
             options: {
-              outputPath: 'assets/fonts'
+              outputPath: 'assets'
             }
           }]
   			},
         {
-          test: /\.png$/,
+          test: /\.(png)$/,
           loader: [{
             loader: 'file-loader',
             options: {
-              outputPath: 'assets/img'
+              outputPath: 'assets'
             }
           }]
         }
