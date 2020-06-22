@@ -6,7 +6,7 @@ head
 	title Search Room
 body
 	+header('default')(class='header')
-	.search-room__main
+	.search-room__main.main
 		.search-room__filter
 			+filter-date-dropdown('даты пребывания в отеле', '19 авг - 23 авг')(class='search-room__date filter-date-dropdown')
 			+dropdown('гости', 'Гости', ['взрослые', 'дети', 'младенцы'])(class='search-room__guests dropdown')

@@ -1,0 +1,40 @@
+.footer-creative {
+	background: $background_color;
+	box-shadow: 0px 10px 20px $dark05;
+	padding-top: 120px;
+}
+
+.footer-creative__logo {
+	@extend .footer__logo;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.footer-creative__copyright {
+	@extend .footer__copyright;
+	text-align: center;
+	margin-top: 21px;
+}
+
+.footer-creative__social-links {
+	@extend .footer__social-links;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 28px;
+}
+
+.footer-creative__social-link {
+	@extend .footer__social-link;
+}
+
+.footer-creative__twitter {
+	@extend .footer__twitter;
+}
+
+.footer-creative__facebook {
+	@extend .footer__facebook;
+}
+
+.footer-creative__instagram {
+	@extend .footer__instagram;
+}

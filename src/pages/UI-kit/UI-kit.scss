@@ -1,0 +1,361 @@
+.UI-kit {
+	position: relative;
+	background-repeat: no-repeat;
+	width: 1440px;
+}
+
+.UI-kit-logo {
+	position: absolute;
+	left: 30px;
+	top: 30px;
+	width: 48px;
+	height: 48px;
+	background: url('../img/logo_grayscale.png');
+	background-repeat: no-repeat;
+}
+
+//form-elements
+
+.text-field-default {
+	position: absolute;
+	left: 140px;
+	top: 143px;
+}
+
+.text-field-focus {
+	position: absolute;
+	left: 140px;
+	top: 227px;
+}
+
+.dropdown-default {
+	position: absolute;
+	left: 141px;
+	top: 311px;
+}
+
+.masked-text-field {
+	position: absolute;
+	left: 140px;
+	top: 398px;
+}
+
+.date-dropdown-default {
+	position: absolute;
+	left: 141px;
+	top: 502px;
+}
+
+.date-dropdown-selected {
+	position: absolute;
+	left: 311px;
+	top: 502px;
+}
+
+.filUI {
+	position: absolute;
+	left: 141px;
+	top: 607px;
+}
+
+.subUI {
+	position: absolute;
+	left: 140px;
+	top: 712px;
+	.subscription-text-field__input-form {
+		width: 267px;
+	}
+}
+
+.checkbox-buttonsUI {
+	position: absolute;
+	left: 587px;
+	top: 143px;
+}
+
+.radio-buttonsUI {
+	position: absolute;
+	left: 587px;
+	top: 313px;
+}
+
+.toggleUI-label {
+	@include input_label;
+	position: absolute;
+	left: 586px;
+	top: 404.56px;
+}
+.toggle-shmugl {
+	position: absolute;
+	left: 587px;
+	top: 433px;
+}
+.toggle-hryugl {
+	position: absolute;
+	left: 587px;
+	top: 467px;
+}
+
+.lide-buttonUI-label {
+	@include input_label;
+	position: absolute;
+	left: 587px;
+	top: 534px;
+}
+.button-likeUI {
+	position: absolute;
+	left: 587px;
+	top: 565px;
+}
+.button-likeUI--selected {
+	position: absolute;
+	left: 637px;
+	top: 565px;
+}
+
+.rate-buttonUI-label {
+	@include input_label;
+	position: absolute;
+	left: 587px;
+	top: 625px;
+}
+
+.rate-button--fourUI {
+	position: absolute;
+	left: 587px;
+	top: 656px;
+}
+
+.rate-button--fiveUI {
+	position: absolute;
+	left: 727px;
+	top: 656px;
+}
+
+.range-sliderUI {
+	position: absolute;
+	left: 979px;
+	top: 144px;
+}
+
+.buttonsUI-label {
+	@include input-label;
+	position: absolute;
+	left: 979px;
+	top: 231px;
+}
+
+.button-darkUI {
+	position: absolute;
+	width: 99px;
+	height: 44px;
+	left: 980px;
+	top: 262px;
+}
+
+.button-darkUI-clicked {
+	position: absolute;
+	width: 99px;
+	height: 44px;
+	left: 1098px;
+	top: 262px;
+}
+
+.button-lightUI {
+	position: absolute;
+	width: 99px;
+	height: 44px;
+	left: 979px;
+	top: 336px;
+}
+
+.button-lightUI-clicked {
+	position: absolute;
+	width: 99px;
+	height: 44px;
+	left: 1098px;
+	top: 336px;
+}
+
+.button-form--applyUI {
+	position: absolute;
+	left: 980px;
+	top: 411px;
+}
+
+.button-form--cleanUI {
+	position: absolute;
+	left: 1061px;
+	top: 410.56px;
+}
+
+.button-decoratedUI {
+	position: absolute;
+	left: 979px;
+	top: 456px;
+}
+
+.paginationUI {
+	position: absolute;
+	left: 979px;
+	top: 540px;
+}
+
+.dropdown-interiorUI-default {
+	position: absolute;
+	left: 140px;
+	top: 876px;
+}
+
+.dropdown-interiorUI-expanded {
+	position: absolute;
+	left: 140px;
+	top: 960px;
+}
+
+.dropdown--selectedUI {
+	position: absolute;
+	left: 587px;
+	top: 876px;
+}
+
+.dropdown--selected2UI {
+	position: absolute;
+	left: 979px;
+	top: 876px;
+}
+
+.expandable-checkbox-listUI {
+	position: absolute;
+	left: 141px;
+	top: 1182px;
+}
+
+.expandable-checkbox-list--selectedUI {
+	position: absolute;
+	left: 140px;
+	top: 1246px;
+}
+
+.rich-checkbox-buttonsUI {
+	position: absolute;
+	left: 587px;
+	top: 1196px;
+}
+
+.bullet-listUI {
+	position: absolute;
+	left: 979px;
+	top: 1196px;
+	.bullet-list__label {
+		text-transform: uppercase;
+	}
+}
+
+.room-featuresUI {
+	position: absolute;
+	left: 140px;
+	top: 1545px;
+}
+
+.reviewUI {
+	position: absolute;
+	left: 587px;
+	top: 1574px;
+}
+
+//cards
+
+.card-searchUI {
+	position: absolute;
+	left: 140px;
+	top: 150px;
+}
+
+.card-registrationUI {
+	position: absolute;
+	left: 140px;
+	top: 564px;
+}
+
+.card-confirmationUI {
+	position: absolute;
+	left: 560px;
+	top: 150px;
+}
+
+.card-loginUI {
+	position: absolute;
+	left: 560px;
+	top: 701px;
+}
+
+.card-room--888UI {
+	position: absolute;
+	left: 980px;
+	top: 559px;
+}
+
+.card-room--840UI {
+	position: absolute;
+	left: 980px;
+	top: 856px;
+}
+
+.calendarUI {
+	position: absolute;
+	left: 980px;
+	top: 150px;
+	.calendar__second-week {
+		.calendar__month-day:nth-child(4) {
+			@extend .calendar__month-day--today;
+		}
+	}
+	.calendar__fourth-week {
+		.calendar__month-day:first-child {
+			@extend .calendar__month-day--selected-start;
+		} 
+		.calendar__month-day:nth-child(2),
+		.calendar__month-day:nth-child(3),
+		.calendar__month-day:nth-child(4) {
+			@extend .calendar__month-day--included;
+		}
+		.calendar__month-day:nth-child(5) {
+			@extend .calendar__month-day--selected-end;
+		}
+	}
+}
+
+// headers-footers
+.headerUIdefault {
+	position: absolute;
+	left: 0px;
+	top: 140px;
+}
+
+.headerUI {
+	position: absolute;
+	left: 0px;
+	top: 250px;
+	.header__links--primary {
+		margin-left: 180px;
+	}
+	.header__user-name {
+		margin-left: 25px;
+		padding-left: 20px;
+	}
+}
+
+.footerUI {
+	position: absolute;
+	left: 0px;
+	top: 360px;
+}
+
+.footer-creativeUI {
+	position: absolute;
+	width: 768px;
+	height: 367px;
+	left: 336px;
+	top: 843px;
+}

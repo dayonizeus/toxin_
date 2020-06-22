@@ -12,16 +12,15 @@ module.exports = {
       // index: 'html/landing.html',
       // index: 'html/search-room.html',
       // index: 'html/room-details.html',
-      index: 'html/access.html',
+      // index: 'html/access.html',
+      index: 'UI-kit/form-elements.html',
+      // index: 'UI-kit/cards.html',
+      // index: 'UI-kit/headers-footers.html',
       stats: 'errors-only',
   		contentBase: path.resolve(__dirname, 'dist')
   	},
   	plugins: [
   		new CleanWebpackPlugin(),
-  		new HtmlWebpackPlugin({
-  			template: './src/pug/index.pug',
-        filename: 'html/index.html'
-  		}),
       new HtmlWebpackPlugin({
         template: './src/pages/landing/landing.pug',
         filename: 'html/landing.html'
@@ -37,6 +36,18 @@ module.exports = {
       new HtmlWebpackPlugin({
         template: './src/pages/access/access.pug',
         filename: 'html/access.html'
+      }),
+      new HtmlWebpackPlugin({
+        template: './src/pages/UI-kit/form-elements.pug',
+        filename: 'UI-kit/form-elements.html'
+      }),
+      new HtmlWebpackPlugin({
+        template: './src/pages/UI-kit/cards.pug',
+        filename: 'UI-kit/cards.html'
+      }),
+      new HtmlWebpackPlugin({
+        template: './src/pages/UI-kit/headers-footers.pug',
+        filename: 'UI-kit/headers-footers.html'
       }),
   		new MiniCssExtractPlugin({
         filename: 'style.css'

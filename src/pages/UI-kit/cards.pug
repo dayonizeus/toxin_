@@ -1,0 +1,11 @@
+include ../../pug/mixins.pug
+
+.UI-kit
+	.UI-kit-logo
+	+card-search()(class='card-search card-searchUI')
+	+card-registration()(class='card-registration card-registrationUI')
+	+card-confirmation(888, 'люкс', 9990, 0, 2179, 300)(class='card-confirmation card-confirmationUI')
+	+card-login()(class='card-login card-loginUI')
+	+card-room('№ 888', 'Люкс', '9 990', 5, 145)(class='card-room card-room--888 card-room--888UI')
+	+card-room('№ 840', '', '9 900', 4, 65)(class='card-room card-room--840 card-room--840UI')
+	+calendar()(class='calendar calendarUI')

@@ -3,9 +3,9 @@
 	width: 380px;
 	height: 374px;
 	padding: {
-		left: 30px;
-		top: 40px;
-		right: 28px;
+		left: 29px;
+		top: 39px;
+		right: 29px;
 	}
 	@media screen and (max-width: 479px) {
 		width: 320px;
@@ -32,6 +32,9 @@
 .card-search__guests {
 	margin-top: 21px;
 	z-index: 5;
+	.dropdown__input-form-icon::before {
+		top: 11px;
+	}
 	@media screen and (max-width: 479px) {
 		width: 300px;
 		margin-left: 10px;
@@ -39,7 +42,10 @@
 }
 
 .card-search__submit {
-	margin-top: 30px;
+	margin-top: 31px;
+	.button-decorated__button {
+		padding-left: 0;
+	}
 	@media screen and (max-width: 479px) {
 		width: 300px;
 		margin-left: 10px;

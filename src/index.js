@@ -12,3 +12,4 @@ import './blocks/card-room/card-room';
 import './blocks/expandable-checkbox-list/expandable-checkbox-list';
 import './blocks/card-confirmation/card-confirmation';
 import './pages/access/access';
+import './pages/UI-kit/UI-kit';
