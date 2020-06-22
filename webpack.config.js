@@ -76,9 +76,6 @@ module.exports = {
   				test: /\.pug$/,
   				loader: {
   					loader: 'pug-loader',
-  					options: {
-  						pretty: true
-  					}
   				}
   			},
   			{
