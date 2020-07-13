@@ -1,4 +1,14 @@
 # toxin_
+Используемые технологии:
+
+* HTML/PUG
+* CSS/SCSS
+* JavaScript
+* jQuery
+* Python
+* Webpack
+* BEM
+
 Страницы сайта:
 
 * [Вход/регистрация](https://dayonizeus.github.io/dayonizeus_access.gitgub.io/)
